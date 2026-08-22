@@ -19,7 +19,7 @@ FORBIDDEN_DIR_NAMES = {
 }
 MODEL_EXTENSIONS = {".pt", ".pth", ".ckpt", ".onnx", ".safetensors"}
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".tif", ".tiff", ".bmp", ".webp"}
-TEXT_EXTENSIONS = {".md", ".txt", ".csv", ".json", ".yml", ".yaml", ".py", ".toml", ".cff"}
+TEXT_EXTENSIONS = {".md", ".txt", ".csv", ".json", ".yml", ".yaml", ".py", ".toml", ".cff", ".ipynb"}
 LOCAL_PATH_PATTERNS = [
     re.compile(r"/content/drive/", re.I),
     re.compile(r"[A-Za-z]:\\\\Users\\\\", re.I),
@@ -28,7 +28,7 @@ LOCAL_PATH_PATTERNS = [
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--strict", action="store_true", help="Also require key release files.")
+    ap.add_argument("--strict", action="store_true", help="Also require final release-safe transfer assets.")
     args = ap.parse_args()
 
     errors: list[str] = []
@@ -54,7 +54,7 @@ def main() -> int:
                 continue
             for pattern in LOCAL_PATH_PATTERNS:
                 if pattern.search(text):
-                    # Historical reconciliation notes may mention a local-path pattern descriptively.
+                    # Reconciliation notes may mention historical local-path patterns descriptively.
                     if rel.as_posix() not in {"docs/RECONCILIATION_NOTES.md"}:
                         warnings.append(f"local machine/Drive path reference in {rel}")
                     break
@@ -67,9 +67,16 @@ def main() -> int:
         "protocol/manuscript_aligned_protocol_v1.json",
         "splits/e2a_split_summary.csv",
         "manifests/e2a_split_integrity.csv",
+        "manifests/e2_run_registry_v4.csv",
+        "results/final_inference/01_strict_prediction_validation.csv",
+        "results/final_inference/03_point_summary_by_architecture.csv",
+        "results/final_inference/05_pairwise_macro_f1_bootstrap_holm.csv",
+        "results/final_inference/07_ensemble_bootstrap_intervals.csv",
         "results/internal/05_global_summary_by_architecture.csv",
         "results/external/tom2024/D_estadistica_bloqueada_TOM2024.csv",
         "results/external/tom2024/tom2024_classwise_bootstrap_ci.csv",
+        "figures/final_pdf_fingerprints_verified.csv",
+        "manifests/notebook_release_audit.csv",
         "docs/MANUSCRIPT_ASSET_CROSSWALK.md",
         "docs/SUPPLEMENT_RECONCILIATION.md",
     ]
@@ -79,10 +86,16 @@ def main() -> int:
 
     if args.strict:
         strict_required = [
-            "data/manifests/manifest_master_clean_snapshot_v1_pre_split.csv",
-            "splits/e2a_adege_to_pandian_manifest_v1.csv",
+            "data/manifests/manifest_master_clean_snapshot_v1_release.csv",
+            "splits/e2a_adege_to_pandian_manifest_v1_release.csv",
+            "notebooks/02_internal_comparison_E2A_release.ipynb",
+            "notebooks/03_final_paired_inference_release.ipynb",
+            "figures/main/Figure_1_three_axes_independence.pdf",
+            "figures/main/Figure_2_external_performance_and_rank_reversal.pdf",
+            "figures/main/Figure_3_error_destinations_pandian.pdf",
+            "figures/main/Figure_4_error_destinations_plantvillage.pdf",
+            "figures/main/Figure_5_reliability_diagram.pdf",
             "manifests/release_sha256.csv",
-            "notebooks/RELEASE_AUDIT.csv",
         ]
         for rel in strict_required:
             if not (ROOT / rel).is_file():
