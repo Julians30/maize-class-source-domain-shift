@@ -1,0 +1,3 @@
+ensemble,macro_f1,bootstrap_ci95_lower,bootstrap_ci95_upper
+Six-architecture soft vote averaged across seeds,0.96585326165953,0.9552877068519592,0.9758430376648903
+Eighteen-model soft vote,0.9683038469443646,0.9576460018754005,0.9781085208058358
