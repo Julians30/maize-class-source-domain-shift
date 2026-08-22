@@ -1,0 +1,5 @@
+scenario,evaluation_role,n_images,n_groups,n_classes,n_sources,n_components
+E2_A_Adege_to_Pandian,external_component_test,1922,1922,1,1,1
+E2_A_Adege_to_Pandian,test,1719,1719,9,6,3
+E2_A_Adege_to_Pandian,train,8043,8039,9,6,3
+E2_A_Adege_to_Pandian,val,1729,1727,9,6,3
