@@ -17,7 +17,9 @@ jobs:
         run: python scripts/audit_release_scope.py --strict
       - name: Verify manuscript-facing core claims
         run: python scripts/verify_core_claims.py
-      - name: Confirm no unresolved reconciliation markers
+      - name: Verify prepared transfer assets (strict)
+        run: python scripts/verify_pending_transfer.py --require-all
+      - name: Confirm no unresolved release markers
         run: |
           if grep -R -n -E 'COMPLETAR ANTES DEL ENV[IÍ]O|\[Añadir DOI|TODO_RELEASE|RECONCILIATION_REQUIRED' --exclude-dir=.git . ; then
             echo 'Unresolved release marker found.'
