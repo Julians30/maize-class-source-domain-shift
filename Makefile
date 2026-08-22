@@ -2,9 +2,11 @@
 
 audit:
 	python scripts/audit_release_scope.py
+	python scripts/audit_notebooks.py
 
 verify:
 	python scripts/audit_release_scope.py
+	python scripts/audit_notebooks.py
 	python scripts/verify_core_claims.py
 	python scripts/verify_pending_transfer.py
 
@@ -13,6 +15,7 @@ verify-pending:
 
 release-check:
 	python scripts/audit_release_scope.py --strict
+	python scripts/audit_notebooks.py --require
 	python scripts/verify_core_claims.py
 	python scripts/verify_pending_transfer.py --require-all
 
