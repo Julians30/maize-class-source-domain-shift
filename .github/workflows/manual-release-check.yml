@@ -1,0 +1,25 @@
+name: Manual strict release check
+
+on:
+  workflow_dispatch:
+
+jobs:
+  strict-release-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit release scope (strict)
+        run: python scripts/audit_release_scope.py --strict
+      - name: Verify manuscript-facing core claims
+        run: python scripts/verify_core_claims.py
+      - name: Confirm no unresolved reconciliation markers
+        run: |
+          if grep -R -n -E 'COMPLETAR ANTES DEL ENV[IÍ]O|\[Añadir DOI|TODO_RELEASE|RECONCILIATION_REQUIRED' --exclude-dir=.git . ; then
+            echo 'Unresolved release marker found.'
+            exit 1
+          fi
