@@ -26,3 +26,5 @@ jobs:
         run: python scripts/verify_pending_transfer.py
       - name: Verify release-safe E2-A internal predictions when present
         run: python scripts/verify_internal_predictions.py
+      - name: Verify release-safe Pandian2019 predictions when present
+        run: python scripts/verify_pandian_predictions.py
