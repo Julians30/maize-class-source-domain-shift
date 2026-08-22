@@ -15,6 +15,8 @@ jobs:
           python-version: '3.12'
       - name: Audit release scope (strict)
         run: python scripts/audit_release_scope.py --strict
+      - name: Audit release notebooks (strict)
+        run: python scripts/audit_notebooks.py --require
       - name: Verify manuscript-facing core claims
         run: python scripts/verify_core_claims.py
       - name: Verify prepared transfer assets (strict)
