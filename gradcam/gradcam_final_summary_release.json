@@ -1,0 +1,22 @@
+{
+  "created_at_utc": "2026-08-01T17:46:38.965905+00:00",
+  "input_predictions_sha256": "e64cc2e0cc7fced30aa9b788cdcfeffbe768c08fbbdf36576dbee94233b353d3",
+  "checkpoint_sha256": "49f06d45007d7b5465f5c5f9feb0858b5d0f33dc554edd39b46733cc77760ad1",
+  "protocol": "P1_directo_3_clases",
+  "architecture": "ResNet50",
+  "seed": 17,
+  "true_class": "rust",
+  "correct_cases": 4,
+  "incorrect_cases": 4,
+  "selection_rule": "Highest frozen confidence within correct and incorrect strata.",
+  "preprocessing": "EXIF transpose, RGB conversion, optional short-side resize to 256, JPEG quality 95 roundtrip, resize to 224x224, ImageNet normalization.",
+  "interpretation_note": "Grad-CAM is exploratory and does not establish causal reliance on source-specific shortcuts.",
+  "source_artifact": "gradcam_final_summary.json",
+  "outputs": [
+    "gradcam_selected_cases_release.csv",
+    "gradcam_validated_records_release.csv",
+    "gradcam_correct_vs_incorrect_resnet50_seed17.png",
+    "gradcam_correct_vs_incorrect_resnet50_seed17.pdf"
+  ],
+  "release_note": "Absolute local Drive paths are intentionally omitted. The composite figure contains source-image content and remains pending source-rights review."
+}
