@@ -1,0 +1,37 @@
+source_artifact,experiment,architecture,seed,hardware_hint,file_type,total_seconds,epochs_trained,best_epoch,start_time,end_time,notes,has_total_seconds,registry_priority,total_minutes,total_hours
+e2_run_registry_v4.csv,E2,EfficientNet-B0,17,NVIDIA L4,.csv,,,14.0,,,parsed from run registry,0,1,,
+e2_run_registry_v4.csv,E2,EfficientNet-B0,42,NVIDIA L4,.csv,,,17.0,,,parsed from run registry,0,1,,
+e2_run_registry_v4.csv,E2,EfficientNet-B0,73,NVIDIA L4,.csv,,,20.0,,,parsed from run registry,0,1,,
+e2_run_registry_v4.csv,E2,MobileNetV3-Large,17,NVIDIA L4,.csv,,,21.0,,,parsed from run registry,0,1,,
+e2_run_registry_v4.csv,E2,MobileNetV3-Large,42,NVIDIA L4,.csv,,,20.0,,,parsed from run registry,0,1,,
+e2_run_registry_v4.csv,E2,MobileNetV3-Large,73,NVIDIA L4,.csv,,,20.0,,,parsed from run registry,0,1,,
+e2_run_registry_v4.csv,E2,MobileViT-S,17,NVIDIA L4,.csv,,,21.0,,,parsed from run registry,0,1,,
+e2_run_registry_v4.csv,E2,MobileViT-S,42,NVIDIA L4,.csv,,,12.0,,,parsed from run registry,0,1,,
+e2_run_registry_v4.csv,E2,MobileViT-S,73,NVIDIA L4,.csv,,,25.0,,,parsed from run registry,0,1,,
+e2_run_registry_v4.csv,E2,ResNet50,17,NVIDIA L4,.csv,,,29.0,,,parsed from run registry,0,1,,
+e2_run_registry_v4.csv,E2,ResNet50,42,NVIDIA L4,.csv,,,13.0,,,parsed from run registry,0,1,,
+e2_run_registry_v4.csv,E2,ResNet50,73,NVIDIA L4,.csv,,,32.0,,,parsed from run registry,0,1,,
+e2_run_registry_v4.csv,E2,Swin-Tiny,17,NVIDIA L4,.csv,,,40.0,,,parsed from run registry,0,1,,
+e2_run_registry_v4.csv,E2,Swin-Tiny,42,NVIDIA L4,.csv,,,12.0,,,parsed from run registry,0,1,,
+e2_run_registry_v4.csv,E2,Swin-Tiny,73,NVIDIA L4,.csv,,,37.0,,,parsed from run registry,0,1,,
+e2_run_registry_v4.csv,E2,ViT-Base/16,17,NVIDIA L4,.csv,,,37.0,,,parsed from run registry,0,1,,
+e2_run_registry_v4.csv,E2,ViT-Base/16,42,NVIDIA L4,.csv,,,26.0,,,parsed from run registry,0,1,,
+e2_run_registry_v4.csv,E2,ViT-Base/16,73,NVIDIA L4,.csv,,,30.0,,,parsed from run registry,0,1,,
+history.csv,E2_A,efficientnet_b0,17,NVIDIA L4,.csv,10812.903124213002,22.0,22.0,,,parsed from CSV,1,0,180.2150520702167,3.0035842011702782
+history.csv,E2_A,efficientnet_b0,42,NVIDIA L4,.csv,12142.766086123003,25.0,25.0,,,parsed from CSV,1,0,202.37943476871672,3.372990579478612
+history.csv,E2_A,efficientnet_b0,73,NVIDIA L4,.csv,13312.496522375986,28.0,28.0,,,parsed from CSV,1,0,221.87494203959977,3.697915700659996
+history.csv,E2_A,mobilenetv3_large,17,NVIDIA L4,.csv,14050.299788698996,29.0,29.0,,,parsed from CSV,1,0,234.17166314498328,3.902861052416388
+history.csv,E2_A,mobilenetv3_large,42,NVIDIA L4,.csv,13410.851276510995,28.0,28.0,,,parsed from CSV,1,0,223.5141879418499,3.7252364656974986
+history.csv,E2_A,mobilenetv3_large,73,NVIDIA L4,.csv,13687.080301875998,28.0,28.0,,,parsed from CSV,1,0,228.11800503126665,3.8019667505211103
+history.csv,E2_A,mobilevit_s,17,NVIDIA L4,.csv,14480.631400259006,29.0,29.0,,,parsed from CSV,1,0,241.34385667098343,4.022397611183057
+history.csv,E2_A,mobilevit_s,42,NVIDIA L4,.csv,9691.001624044002,20.0,20.0,,,parsed from CSV,1,0,161.5166937340667,2.6919448955677785
+history.csv,E2_A,mobilevit_s,73,NVIDIA L4,.csv,16066.089416561996,33.0,33.0,,,parsed from CSV,1,0,267.76815694269993,4.462802615711666
+history.csv,E2_A,resnet50,17,NVIDIA L4,.csv,18362.69368599801,37.0,37.0,,,parsed from CSV,1,0,306.04489476663355,5.100748246110559
+history.csv,E2_A,resnet50,42,NVIDIA L4,.csv,10320.712721976995,21.0,21.0,,,parsed from CSV,1,0,172.01187869961663,2.86686464499361
+history.csv,E2_A,resnet50,73,NVIDIA L4,.csv,18727.653479837027,40.0,40.0,,,parsed from CSV,1,0,312.12755799728376,5.202125966621396
+history.csv,E2_A,swin_tiny_patch4_window7_224,17,NVIDIA L4,.csv,21652.93124787701,40.0,40.0,,,parsed from CSV,1,0,360.88218746461695,6.014703124410282
+history.csv,E2_A,swin_tiny_patch4_window7_224,42,NVIDIA L4,.csv,10979.681189798996,20.0,20.0,,,parsed from CSV,1,0,182.99468649664996,3.049911441610832
+history.csv,E2_A,swin_tiny_patch4_window7_224,73,NVIDIA L4,.csv,22403.507266007982,40.0,40.0,,,parsed from CSV,1,0,373.3917877667998,6.223196462779996
+history.csv,E2_A,vit_base_patch16_224,17,NVIDIA L4,.csv,21441.38148883,40.0,40.0,,,parsed from CSV,1,0,357.3563581471666,5.9559393024527765
+history.csv,E2_A,vit_base_patch16_224,42,NVIDIA L4,.csv,17567.81662563399,34.0,34.0,,,parsed from CSV,1,0,292.7969437605665,4.879949062676109
+history.csv,E2_A,vit_base_patch16_224,73,NVIDIA L4,.csv,20947.899482548008,38.0,38.0,,,parsed from CSV,1,0,349.1316580424668,5.818860967374446
