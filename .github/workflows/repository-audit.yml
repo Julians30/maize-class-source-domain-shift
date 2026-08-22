@@ -20,3 +20,5 @@ jobs:
         run: python scripts/audit_release_scope.py
       - name: Verify manuscript-facing core claims
         run: python scripts/verify_core_claims.py
+      - name: Verify any pending-transfer assets already present
+        run: python scripts/verify_pending_transfer.py
