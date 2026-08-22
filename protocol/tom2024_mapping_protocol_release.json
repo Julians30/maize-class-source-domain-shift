@@ -1,0 +1,54 @@
+{
+  "source_artifact": "A_protocolo_mapeo_TOM2024_v1.json",
+  "source_manifest_file": "tom2024_maize_external_clean_frozen_v2.csv",
+  "source_manifest_sha256": "4216a0ab02418372451433b667ab8c39a2786850c0c264169d680b8a40220111",
+  "evaluate_all_tom2024": false,
+  "classes_model": [
+    "fall_armyworm",
+    "grasshopper",
+    "healthy",
+    "leaf_beetle",
+    "leaf_blight",
+    "leaf_spot",
+    "lethal_necrosis",
+    "rust",
+    "streak_virus"
+  ],
+  "protocols": {
+    "P1_directo_3_clases": {
+      "description": "Confirmatory conservative analysis using direct nominal correspondences.",
+      "mapping": {
+        "Healthy_leaf": "healthy",
+        "Rust-D": "rust",
+        "Spodoptera_frugiperda-P": "fall_armyworm"
+      },
+      "confirmatory": true
+    },
+    "P2_directo_mas_actividad": {
+      "description": "Sensitivity analysis adding Spodoptera frugiperda activity/damage images.",
+      "mapping": {
+        "Healthy_leaf": "healthy",
+        "Rust-D": "rust",
+        "Spodoptera_frugiperda-P": "fall_armyworm",
+        "Spodotera_frugiperda- A": "fall_armyworm"
+      },
+      "confirmatory": false
+    }
+  },
+  "unmapped_ambiguous": {
+    "Curvularia-D": "possible leaf_spot; requires phytopathological validation",
+    "Helminthosporiosis-D": "possible leaf_blight; requires phytopathological validation",
+    "Stripe-D": "possible streak_virus; label not sufficiently specific",
+    "Virosis-D": "possible streak_virus; generic viral category",
+    "Abiotic_disease-D": "no homologous benchmark class",
+    "Aphids-P": "no homologous benchmark class"
+  },
+  "rules": [
+    "No training or fine-tuning.",
+    "No model selection using TOM2024.",
+    "No calibration or threshold fitting using TOM2024.",
+    "Predictions retain the original nine-class output space.",
+    "Similarity groups are used as the resampling unit."
+  ],
+  "release_note": "Absolute local Drive paths from the preserved source artifact were intentionally omitted from this release-safe metadata copy."
+}
