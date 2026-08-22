@@ -1,0 +1,9 @@
+correctness,image_id,true_class,frozen_pred_class,frozen_confidence,recomputed_pred_class,recomputed_confidence,absolute_confidence_difference
+Correct,TOM2024_MAIZE_001736,rust,rust,0.9304733,rust,0.9304829239845276,9.62398452764024e-06
+Correct,TOM2024_MAIZE_001312,rust,rust,0.89518046,rust,0.895155131816864,2.5328183135941984e-05
+Correct,TOM2024_MAIZE_000948,rust,rust,0.8895193,rust,0.8895159959793091,3.30402069093072e-06
+Correct,TOM2024_MAIZE_003388,rust,rust,0.8815025,rust,0.881518542766571,1.6042766571078282e-05
+Incorrect,TOM2024_MAIZE_000135,rust,healthy,0.73267883,healthy,0.7326439619064331,3.4868093566897684e-05
+Incorrect,TOM2024_MAIZE_004121,rust,streak_virus,0.73124915,streak_virus,0.7312149405479431,3.420945205689918e-05
+Incorrect,TOM2024_MAIZE_000371,rust,lethal_necrosis,0.7202724,lethal_necrosis,0.7202814221382141,9.022138214076492e-06
+Incorrect,TOM2024_MAIZE_003546,rust,lethal_necrosis,0.69751,lethal_necrosis,0.6975144147872925,4.414787292517097e-06
