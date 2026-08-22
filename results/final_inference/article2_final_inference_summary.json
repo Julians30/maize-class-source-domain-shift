@@ -1,0 +1,20 @@
+{
+  "validated_runs": 18,
+  "internal_test_images": 1719,
+  "bootstrap_replicates": 10000,
+  "best_mean_macro_f1_architecture": "EfficientNet-B0",
+  "best_mean_macro_f1": 0.960112231951685,
+  "best_mean_macro_f1_ci95": [
+    0.9496874213218689,
+    0.9698103785514831
+  ],
+  "significant_pairwise_macro_f1_comparisons_after_holm": 0,
+  "most_stable_architecture_by_macro_f1_sd": "MobileNetV3-Large",
+  "most_stable_macro_f1_sd": 0.0011449925744498148,
+  "lowest_mean_aurc_architecture": "MobileNetV3-Large",
+  "lowest_mean_aurc": 0.021021124127722664,
+  "hardest_class_by_universal_correctness": "leaf_spot",
+  "hardest_class_universally_correct_proportion": 0.6209150326797386,
+  "six_architecture_ensemble_macro_f1": 0.96585326165953,
+  "eighteen_model_ensemble_macro_f1": 0.9683038469443646
+}
