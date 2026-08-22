@@ -1,0 +1,14 @@
+component_clean,source_operational,class,n_images,n_groups,n_sha,n_phash
+adege_clean,Adege_field_smartphone,rust,994,994,994,994
+adege_clean,Adege_rust_rss,rust,81,81,81,81
+adege_clean,Kaggle_HEALTHY_up,healthy,1667,1667,1667,1667
+adege_clean,Kaggle_Healthy_paren,healthy,709,709,709,709
+cimmyt_mlnd_clean,CIMMYT_MLND,lethal_necrosis,3229,3229,3229,3229
+pandian2019_clean,Pandian2019,rust,1922,1922,1922,1922
+raw_ccmt_clean,raw_ccmt_clean,fall_armyworm,282,282,282,282
+raw_ccmt_clean,raw_ccmt_clean,grasshopper,669,669,669,669
+raw_ccmt_clean,raw_ccmt_clean,healthy,203,203,203,203
+raw_ccmt_clean,raw_ccmt_clean,leaf_beetle,932,929,932,932
+raw_ccmt_clean,raw_ccmt_clean,leaf_blight,783,783,783,783
+raw_ccmt_clean,raw_ccmt_clean,leaf_spot,1025,1023,1025,1025
+raw_ccmt_clean,raw_ccmt_clean,streak_virus,917,916,917,917
