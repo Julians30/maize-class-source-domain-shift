@@ -1,0 +1,51 @@
+{
+  "authority": "current manuscript and supplementary material",
+  "manuscript_title": "Class–Source Confounding and Architecture-Selection Instability under Domain Shift: A Multi-Source Benchmark for Maize Disease and Pest Image Classification",
+  "corpus": {
+    "master_manifest": "manifest_master_clean_snapshot_v1_pre_split.csv",
+    "master_manifest_sha256": "19c902a8bd95b64d3594fa48a0a628a1357dbc48518f91e34e9fb502f27ac0e8",
+    "n_images": 13413,
+    "n_groups": 13407,
+    "n_classes": 9
+  },
+  "E2_A": {
+    "train_images": 8043,
+    "validation_images": 1729,
+    "test_images": 1719,
+    "classes": 9
+  },
+  "architectures": ["MobileNetV3-Large", "ResNet50", "EfficientNet-B0", "MobileViT-S", "ViT-Base/16", "Swin-Tiny"],
+  "seeds": [17, 42, 73],
+  "training": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "max_epochs": 40,
+    "warmup_fraction": 0.05,
+    "scheduler": "cosine",
+    "effective_batch_size": 64,
+    "label_smoothing": 0.10,
+    "early_stopping_patience": 8,
+    "checkpoint_selection": "validation_macro_f1"
+  },
+  "external_domains": {
+    "Pandian2019": {"n_images": 1922, "scope": "rust"},
+    "PlantVillage_filtered": {"n_images": 1498, "n_groups": 1490, "scope": "Northern Corn Leaf Blight and Gray Leaf Spot"},
+    "TOM2024_confirmatory": {"n_images": 1230, "scope": "Healthy_leaf, Rust-D, Spodoptera_frugiperda-P"},
+    "TOM2024_sensitivity": {"n_additional_images": 603, "scope": "Spodotera_frugiperda-A activity/damage"}
+  },
+  "statistics": {
+    "primary_metric": "macro_f1",
+    "architecture_effect": "seed-blocked additive model with restricted permutations",
+    "paired_bootstrap_resamples_TOM2024": 10000,
+    "multiple_testing": "Holm",
+    "ranking_stability": "Kendall_W"
+  },
+  "scope_notes": {
+    "E1": "preliminary complementary analysis",
+    "E2_B": "prespecified but not included in current manuscript",
+    "E3_current_manuscript": "filtered PlantVillage external evaluation",
+    "E4": "prespecified but not included",
+    "historical_E3": "older project artifacts used E3 for a different nine-class multisource split; they are not manuscript-facing E3"
+  }
+}
