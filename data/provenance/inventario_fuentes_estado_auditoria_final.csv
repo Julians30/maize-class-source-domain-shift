@@ -1,0 +1,12 @@
+source,n_images,n_paths,n_classes,classes,n_filenames,n_phash_preliminary,audit_status,included_in_snapshot_v1,excluded_after_audit
+CCMT_augmented,19126,19126,7,fall_armyworm | grasshopper | healthy | leaf_beetle | leaf_blight | leaf_spot | streak_virus,19126,15557,auditada_excluida_aumento_pregenerado_pseudorreplicacion,False,True
+CCMT_raw_id8,136,136,1,fall_armyworm,136,132,auditada_excluida_procedencia_licencia_heterogeneidad,False,True
+Otras,134,134,3,fall_armyworm | healthy | rust,134,129,auditada_excluida_solapamiento_procedencia_etiquetas,False,True
+Adege_fall_armyworm,276,276,1,fall_armyworm,276,276,auditada_excluida_solapamiento_raw_ccmt,False,True
+Adege_grasshoper,673,673,1,grasshopper,673,673,auditada_excluida_solapamiento_raw_ccmt,False,True
+Adege_field_smartphone,1000,1000,1,rust,1000,994,auditada_incluida_adege_clean,True,False
+Adege_rust_rss,118,118,1,rust,118,82,auditada_incluida_adege_clean,True,False
+Kaggle_HEALTHY_up,1667,1667,1,healthy,1667,1667,auditada_incluida_adege_clean,True,False
+Kaggle_Healthy_paren,709,709,1,healthy,709,709,auditada_incluida_adege_clean,True,False
+CIMMYT_MLND,3231,3231,1,lethal_necrosis,3231,3231,auditada_incluida_cimmyt_clean,True,False
+Pandian2019,2005,2005,1,rust,2005,1924,auditada_incluida_pandian_clean,True,False
