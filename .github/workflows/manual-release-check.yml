@@ -23,6 +23,8 @@ jobs:
         run: python scripts/verify_pending_transfer.py --require-all
       - name: Verify release-safe E2-A internal predictions (strict)
         run: python scripts/verify_internal_predictions.py --strict
+      - name: Verify release-safe Pandian2019 predictions (strict)
+        run: python scripts/verify_pandian_predictions.py --strict
       - name: Confirm no unresolved release markers
         run: |
           if grep -R -n -E 'COMPLETAR ANTES DEL ENV[IÍ]O|\[Añadir DOI|TODO_RELEASE|RECONCILIATION_REQUIRED' --exclude-dir=.git . ; then
