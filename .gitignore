@@ -1,0 +1,38 @@
+# Credentials and local secrets
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+kaggle.json
+
+# Python / notebooks
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Raw/restricted image content: do not commit without explicit rights review
+raw/
+raw_images/
+images_raw/
+original_images/
+datasets_raw/
+restricted_images/
+
+# Large training artifacts unless intentionally released elsewhere
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+
+# Local archives
+*.zip
+*.7z
+*.rar
