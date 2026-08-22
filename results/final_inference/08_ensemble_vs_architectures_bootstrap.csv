@@ -1,0 +1,7 @@
+ensemble,comparator,macro_f1_difference,bootstrap_ci95_lower,bootstrap_ci95_upper,bootstrap_raw_p,holm_p,significant_after_holm
+Six-architecture soft vote averaged across seeds,EfficientNet-B0,0.005741029707844958,0.0011974498629570007,0.010399115085601807,0.0112,0.0224,True
+Six-architecture soft vote averaged across seeds,MobileNetV3-Large,0.009287597545706183,0.004624180495738983,0.014421695470809936,0.0,0.0,True
+Six-architecture soft vote averaged across seeds,MobileViT-S,0.0058940070291692015,0.0006402075290679933,0.011367774009704588,0.0252,0.0252,True
+Six-architecture soft vote averaged across seeds,ResNet50,0.0073833330169701394,0.001953719556331635,0.013128034770488736,0.0064,0.019200000000000002,True
+Six-architecture soft vote averaged across seeds,Swin-Tiny,0.01288421831877018,0.00708884447813034,0.01903068274259567,0.0,0.0,True
+Six-architecture soft vote averaged across seeds,ViT-Base/16,0.009971791191610402,0.004353836178779602,0.01590343117713928,0.0006,0.0024,True
