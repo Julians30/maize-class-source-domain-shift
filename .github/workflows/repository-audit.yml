@@ -18,6 +18,8 @@ jobs:
           python-version: '3.12'
       - name: Audit release scope
         run: python scripts/audit_release_scope.py
+      - name: Audit release notebooks when present
+        run: python scripts/audit_notebooks.py
       - name: Verify manuscript-facing core claims
         run: python scripts/verify_core_claims.py
       - name: Verify any pending-transfer assets already present
