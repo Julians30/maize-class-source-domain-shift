@@ -16,6 +16,7 @@ This document maps the current manuscript to repository assets. The current manu
 | TOM2024 label mapping and no-tuning rules | `protocol/tom2024_mapping_protocol_release.json` | available |
 | 18 frozen checkpoint hashes | `manifests/checkpoints_tom2024_verified_release.csv` | available |
 | Verified E2-A runtime evidence | `environment/README.md`, `manifests/e2_run_registry_v4.csv` | available: NVIDIA L4, PyTorch 2.11.0+cu128, timm 1.0.15 |
+| Release-safe notebook audit | `manifests/notebook_release_audit.csv`, `notebooks/README.md` | available; two sanitized notebooks prepared, pending transfer |
 
 ## Main results
 
@@ -29,9 +30,9 @@ This document maps the current manuscript to repository assets. The current manu
 | Classwise internal F1 uncertainty | `results/final_inference/06_classwise_f1_bootstrap_intervals.csv` | available |
 | Soft-voting ensemble intervals/comparisons | `results/final_inference/07_ensemble_bootstrap_intervals.csv`, `08_ensemble_vs_architectures_bootstrap.csv` | available |
 | Selective-risk / AURC summaries | `results/final_inference/09_exact_aurc_and_risk_by_run.csv`, `10_exact_aurc_summary.csv` | available |
-| Equal-frequency reliability summary | `results/final_inference/13_equal_frequency_reliability_summary.csv` | available |
+| Equal-frequency reliability data | `results/final_inference/12_equal_frequency_reliability_by_run.csv`, `13_equal_frequency_reliability_summary.csv` | available |
 | Class-level consensus difficulty | `results/final_inference/14_consensus_difficulty_by_class.csv` | available |
-| Compact final-inference claim register | `results/final_inference/article2_final_inference_summary.json` | available |
+| Compact final-inference claim register | `results/final_inference/article2_final_inference_summary.json` | available; historical filename retained for traceability |
 | Class-source association and source-only baseline | `results/class_source/A_asociacion_clase_fuente.csv`, `A_baselines_solo_fuente.csv` | available |
 | Global source-classification control | `results/class_source/B_metricas_fuente_sin_pesos.csv` | available |
 | Fixed-label source-classification controls | `results/class_source/C_fuente_dentro_de_clase.csv` | available |
@@ -40,8 +41,9 @@ This document maps the current manuscript to repository assets. The current manu
 | PlantVillage error destinations | `results/external/plantvillage/C_destino_dominante_por_clase.csv` | available |
 | TOM2024 blocked architecture effect | `results/external/tom2024/D_estadistica_bloqueada_TOM2024.csv` | available |
 | TOM2024 classwise bootstrap uncertainty / Table S18 source | `results/external/tom2024/tom2024_classwise_bootstrap_ci.csv` | available |
-| Training-time / Table S19 source | `results/computational_cost/training_time_table_for_manuscript.csv`, `training_time_summary_by_architecture.csv` | available |
-| Main analytical figure captions and hashes | `figures/figure_captions.csv`, `figures/figure_fingerprints.csv` | available; binaries pending transfer |
+| Training-time / Table S19 source | `results/computational_cost/training_time_table_for_manuscript.csv`, `training_time_summary_by_architecture.csv`, `training_time_audit_by_run_release.csv` | available |
+| Main analytical figure captions | `figures/figure_captions.csv` | available |
+| Current final PDF figure fingerprints | `figures/final_pdf_fingerprints_verified.csv` | available and re-verified against current Drive files; historical `figure_fingerprints.csv` is retained as provenance but is stale for the later Fig. 3/4 files |
 | Grad-CAM selected cases and frozen/recomputed agreement | `gradcam/gradcam_selected_cases_release.csv`, `gradcam_validated_records_release.csv`, `gradcam_final_summary_release.json` | metadata available; image-bearing composite pending rights review |
 
 ## Large authoritative assets still pending transfer
@@ -54,10 +56,10 @@ The following preserved files are known or have release-safe versions prepared b
 - Pandian2019 per-image predictions;
 - filtered PlantVillage manifest, overlap audit, and per-image predictions;
 - TOM2024 frozen clean manifest and per-image prediction outputs;
-- analytical figure PDF/PNG binaries whose SHA-256 values are already catalogued;
-- release-safe notebooks.
+- current analytical figure PDF binaries whose SHA-256 values are already verified;
+- the two release-safe notebooks listed in `manifests/notebook_release_audit.csv`.
 
-These assets should be added through a dedicated pending-only transfer package after notebook and release-scope auditing. The Grad-CAM image-bearing composite is a separate rights decision and must not be bundled automatically.
+A pending-only transfer bundle has been prepared locally for the two full manifests, the two release-safe notebooks, the five current main PDF figures, and the candidate training-time supplementary figure. Per-image prediction outputs will be handled in a subsequent transfer layer. The Grad-CAM image-bearing composite is a separate rights decision and must not be bundled automatically.
 
 ## Important reconciliation rule
 
