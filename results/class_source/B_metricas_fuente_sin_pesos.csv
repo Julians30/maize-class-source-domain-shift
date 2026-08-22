@@ -1,0 +1,2 @@
+tag,ponderado,n_clases,etiquetas,n_train,n_val,n_test,mejor_epoca,epocas_corridas,val_macro_f1_mejor,test_accuracy,test_balanced_accuracy,test_macro_f1,test_mcc,azar_balanceado,azar_mayoritario,test_roc_auc_ovr
+fuente_global_sin_pesos,False,6,Adege_field_smartphone|Adege_rust_rss|CIMMYT_MLND|Kaggle_HEALTHY_up|Kaggle_Healthy_paren|raw_ccmt_clean,8043,1729,1719,4,7,0.997866977137607,0.9947643979057592,0.996900826446281,0.9969550960635883,0.9926939679335782,0.16666666666666666,0.4176847004072135,0.9999952185375544
