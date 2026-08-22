@@ -1,0 +1,3 @@
+tag,n_clases,etiquetas,n_train,n_val,n_test,mejor_epoca,epocas_corridas,val_macro_f1_mejor,test_accuracy,test_balanced_accuracy,test_macro_f1,test_mcc,azar_balanceado,azar_mayoritario,test_roc_auc_ovr,clase,fuentes,min_train_por_fuente
+fuente_en_rust,2,Adege_field_smartphone|Adege_rust_rss,753,161,161,4,6,1.0,1.0,1.0,1.0,1.0,0.5,0.9254658385093167,1.0,rust,Adege_field_smartphone|Adege_rust_rss,57
+fuente_en_healthy,3,Kaggle_HEALTHY_up|Kaggle_Healthy_paren|raw_ccmt_clean,1805,388,386,4,6,0.9882446452476573,0.9948186528497409,0.9875555555555556,0.9875555555555556,0.9896180742334588,0.3333333333333333,0.6476683937823834,0.9999179701843284,healthy,Kaggle_HEALTHY_up|Kaggle_Healthy_paren|raw_ccmt_clean,142
