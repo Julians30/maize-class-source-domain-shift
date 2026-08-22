@@ -4,7 +4,7 @@
 
 **Private — pre-submission reconciliation in progress.**
 
-The repository is aligned to the current maize manuscript and supplementary material at the level of core protocol, frozen-run registry, principal internal inference, class–source controls, external-evaluation summaries, TOM2024 uncertainty, computational-cost evidence, current analytical-figure fingerprints, and release-safe Grad-CAM metadata. No claim is made yet that the repository is a complete public release.
+The repository is aligned to the current maize manuscript and supplementary material at the level of core protocol, frozen-run registry, principal internal inference, class–source controls, external-evaluation summaries, TOM2024 uncertainty, computational-cost evidence, current analytical-figure fingerprints, release-safe Grad-CAM metadata, and audited release manifests for the internal and Pandian2019 prediction layers. No claim is made yet that the repository is a complete public release.
 
 ## Confirmed manuscript core
 
@@ -15,22 +15,32 @@ The repository is aligned to the current maize manuscript and supplementary mate
 - Frozen 18-run registry with configuration, checkpoint, and prediction SHA-256 values is stored in `manifests/e2_run_registry_v4.csv`.
 - Verified E2-A execution evidence recorded in the registry: NVIDIA L4, PyTorch 2.11.0+cu128, timm 1.0.15.
 - Final internal inference layer is stored under `results/final_inference/`, including strict prediction validation, per-run metrics, bootstrap intervals, Holm-adjusted pairwise contrasts, ensemble analyses, selective risk/AURC, per-run and summarized reliability, and class-level consensus difficulty.
+- All 18 original E2-A internal prediction files have been independently matched to the frozen registry SHA-256 values and transformed into release-safe files with private Drive paths removed; expected release hashes are in `manifests/e2a_internal_prediction_expected_sha256.csv`.
+- All 18 original Pandian2019 prediction files have been independently matched to the frozen registry `external_component_predictions_sha256` values. The release-safe transformation preserves 1,922 unique samples/groups per run, nine class probabilities, and reproduces frozen rust top-1 recall. Derivation and validation are versioned under `manifests/pandian2019_prediction_release_*.csv`.
 - Table S18 source data are reconciled through the TOM2024 classwise bootstrap file.
 - Table S19 source data and a release-safe per-run audit are reconciled under `results/computational_cost/`.
 - Main analytical figure captions are catalogued, and current PDF hashes have been independently re-verified in `figures/final_pdf_fingerprints_verified.csv`.
 - The older Drive fingerprint catalog is retained as provenance but is known to predate the latest saved Figures 3 and 4.
 - Two release-safe notebooks have been prepared and audited: zero outputs, zero attachments, no personal Drive paths, and no historical ARTICLE2 tokens remain. Their expected hashes are in `manifests/notebook_release_audit.csv`.
-- Repository scripts now audit release scope, notebook safety, manuscript-facing core claims, and hashes for prepared pending-transfer assets.
+- Repository scripts now audit release scope, notebook safety, manuscript-facing core claims, prepared large/binary assets, E2-A internal prediction files, and Pandian2019 prediction files.
 
 ## Prepared pending transfer
 
-A first pending-only large/binary transfer package has been prepared outside GitHub:
+Three transfer packages have been prepared outside GitHub. The ZIP archives themselves must **not** be committed; only their unpacked contents should be transferred while preserving repository-relative paths.
 
-- package: `maize-class-source-domain-shift_GITHUB_PENDING_ONLY.zip`
-- SHA-256: `928dc861e744135f61dd4d84165e626bf27cabd55313dd4773646f81bfdc59eb`
-- contents: two full release-safe manifests, two release-safe notebooks, five current main analytical PDFs, one explicitly named candidate supplementary training-time PDF, and a package SHA-256 manifest.
+1. `maize-class-source-domain-shift_GITHUB_PENDING_ONLY.zip`
+   - SHA-256: `928dc861e744135f61dd4d84165e626bf27cabd55313dd4773646f81bfdc59eb`
+   - two full release-safe manifests, two release-safe notebooks, five current main analytical PDFs, one explicitly named candidate supplementary training-time PDF, and a package SHA-256 manifest.
 
-Expected target hashes are versioned in `manifests/pending_transfer_expected_sha256.csv`; `scripts/verify_pending_transfer.py` verifies transferred files without requiring them during ordinary development checks and requires all of them during the strict release check.
+2. `maize-class-source-domain-shift_E2A_INTERNAL_PREDICTIONS_PENDING_ONLY.zip`
+   - SHA-256: `c80f7ecd1c5619afffc762b4120cdefaf3f505deb1951c9752f45d1831e2a625`
+   - 18 release-safe internal E2-A per-image prediction/probability files plus derivation/integrity metadata.
+
+3. `maize-class-source-domain-shift_PANDIAN2019_PREDICTIONS_PENDING_ONLY.zip`
+   - SHA-256: `cc4da6065d449fcb0e18217a5a4ea767587ad7f639ad2458c37a85bd4d69aa2a`
+   - 18 release-safe Pandian2019 per-image prediction/probability files, derivation and validation manifests, and package SHA-256 metadata.
+
+The repository contains machine-checkable expected hashes and validators for each prepared layer. Development checks tolerate files not yet manually transferred; the strict release check requires them.
 
 ## Important unresolved reconciliation
 
@@ -40,9 +50,9 @@ The candidate training-time PDF is not yet promoted to final Figure S6. Figure S
 
 ## Pending before release
 
-- transfer the prepared pending-only package contents into their repository paths without committing the ZIP itself;
-- package/transfer the 18 E2-A per-image prediction-probability outputs and external-domain prediction files;
-- package filtered PlantVillage and TOM2024 release-safe manifests/audits;
+- transfer the three prepared pending-only package contents into their repository paths without committing the ZIP archives;
+- package filtered PlantVillage release-safe manifest/overlap audit/per-image predictions;
+- package TOM2024 release-safe frozen manifest and per-image prediction outputs;
 - finalize Figure S5 and reconcile/promote Figure S6;
 - decide whether Figure S7 / the Grad-CAM image-bearing composite can be redistributed after source-rights review;
 - locate an authoritative full software environment export if one exists; otherwise retain only the exact versions documented by the frozen run registry;
