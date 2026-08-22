@@ -1,0 +1,7 @@
+family,name,input_size,initialization
+CNN,MobileNetV3-Large,224,ImageNet_pretrained
+CNN,ResNet50,224,ImageNet_pretrained
+CNN,EfficientNet-B0,224,ImageNet_pretrained
+Hybrid,MobileViT-S,224,ImageNet_pretrained
+Transformer,ViT-Base/16,224,ImageNet_pretrained
+Transformer,Swin-Tiny,224,ImageNet_pretrained
