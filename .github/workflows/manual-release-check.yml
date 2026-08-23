@@ -21,6 +21,10 @@ jobs:
         run: python scripts/verify_core_claims.py
       - name: Verify exact internal blocked macro-F1 randomization
         run: python scripts/verify_internal_blocked_exact.py
+      - name: Verify architecture ranking stability and selection loss
+        run: python scripts/verify_ranking_stability.py
+      - name: Verify supplementary S5-S6 reconciliation (strict)
+        run: python scripts/verify_supplementary_reconciliation.py --strict
       - name: Verify prepared transfer assets (strict)
         run: python scripts/verify_pending_transfer.py --require-all
       - name: Verify release-safe E2-A internal predictions (strict)
