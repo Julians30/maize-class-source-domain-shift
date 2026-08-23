@@ -15,10 +15,18 @@ Reference-level provenance recorded by the manuscript includes:
 - Adege (2026), *Maize Crop Disease (Leaf)*, Mendeley Data, V1, DOI: `10.17632/6w6gsvghfw.1`;
 - Arun Pandian & Geetharamani (2019), plant-leaf-disease data, Mendeley Data, V1, DOI: `10.17632/tywbtsjrjv.1`;
 - PlantVillage as described by Mohanty et al. (2016), used only after an overlap audit and restricted to two retained maize disease classes;
-- TOM2024 as described by Appiah et al. (2025), *Data in Brief* 59, 111357, DOI: `10.1016/j.dib.2025.111357`;
+- TOM2024 as described by Appiah et al. (2025), *Data in Brief* 59, 111357, DOI: `10.1016/j.dib.2025.111357`, with the underlying Mendeley Data record DOI `10.17632/3d4yg89rtr.1`;
 - additional operational components preserved in the local audit, including CIMMYT-derived and Kaggle-derived components, for which redistribution rights must be reviewed independently.
 
 These references document provenance at the level supported by the manuscript. They do **not** constitute a repository-wide licensing determination.
+
+## TOM2024 rights review for Figure S7
+
+The Mendeley Data record for TOM2024 (`10.17632/3d4yg89rtr.1`) explicitly identifies the dataset licence as **Creative Commons Attribution 4.0 International (CC BY 4.0)**. CC BY 4.0 permits sharing and adaptation provided appropriate attribution is given, a link to the licence is supplied, and changes are indicated.
+
+Accordingly, the TOM2024 source images embedded in the manuscript-facing Grad-CAM composite may be redistributed as part of that derived figure under the licence conditions. The final repository figure is prepared as `figures/supplementary/Figure_S7_GradCAM_TOM2024_rust.pdf` (and PNG counterpart) and includes an in-figure attribution stating the TOM2024 source, dataset DOI, CC BY 4.0 status, and that the source images were modified by the displayed Grad-CAM overlays. This determination is **specific to the TOM2024 material used in Figure S7** and must not be generalized to the other third-party sources in the corpus.
+
+Reference licence: `https://creativecommons.org/licenses/by/4.0/`.
 
 ## Components excluded during audit
 
@@ -45,4 +53,4 @@ Subject to final privacy and rights review, the repository may release:
 
 ## Licensing
 
-No blanket data license is asserted for third-party image content. Any future code license or license for author-generated derived data must be scoped explicitly and must not be interpreted as relicensing third-party images.
+No blanket data license is asserted for third-party image content. Any future code license or license for author-generated derived data must be scoped explicitly and must not be interpreted as relicensing third-party images. The verified CC BY 4.0 status of TOM2024 applies only to the corresponding source material and derivative uses that comply with its attribution terms.
