@@ -1,4 +1,4 @@
-.PHONY: audit verify verify-pending verify-internal-blocked verify-ranking verify-supplementary verify-internal-predictions verify-pandian-predictions verify-plantvillage verify-tom2024 release-check status
+.PHONY: audit verify verify-pending verify-internal-blocked verify-ranking verify-supplementary verify-internal-predictions verify-pandian-predictions verify-plantvillage verify-tom2024 release-manifest verify-release-manifest release-check status
 
 audit:
 	python scripts/audit_release_scope.py
@@ -41,6 +41,12 @@ verify-plantvillage:
 verify-tom2024:
 	python scripts/verify_tom2024_release.py
 
+release-manifest:
+	python scripts/build_release_manifest.py
+
+verify-release-manifest:
+	python scripts/verify_release_manifest.py
+
 release-check:
 	python scripts/audit_release_scope.py --strict
 	python scripts/audit_notebooks.py --require
@@ -53,8 +59,9 @@ release-check:
 	python scripts/verify_pandian_predictions.py --strict
 	python scripts/verify_plantvillage_release.py --strict
 	python scripts/verify_tom2024_release.py --strict
+	python scripts/verify_release_manifest.py
 
 status:
 	@echo "Repository is in private pre-submission reconciliation."
 	@echo "Run 'make verify' for current-stage checks; missing prepared large/binary assets are reported as PENDING, not as failures."
-	@echo "Run 'make release-check' only after the prepared core, supplementary S5/S6, E2-A, Pandian2019, PlantVillage, TOM2024, and final repository-wide SHA-256 assets have been transferred."
+	@echo "After all final assets are committed and the tree is clean, run 'make release-manifest', commit manifests/release_sha256.csv, then run 'make release-check'."
