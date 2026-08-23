@@ -78,16 +78,23 @@ The preserved Grad-CAM analysis contains four correct and four incorrect TOM2024
 - `gradcam/gradcam_validated_records_release.csv`
 - `gradcam/gradcam_final_summary_release.json`
 
-The composite PNG/PDF includes source image content and is therefore held pending source-rights review before a public release.
+The TOM2024 Mendeley Data record (`10.17632/3d4yg89rtr.1`) explicitly identifies the dataset licence as **CC BY 4.0**. Under that licence the source images may be redistributed and adapted with attribution, licence identification/link, and indication of changes. The final manuscript-facing Grad-CAM figure therefore embeds a source/licence attribution in the figure itself and states that the source images were modified by the displayed Grad-CAM overlays. The rights determination is specific to TOM2024 and does not extend to the other image sources in the corpus. Full reasoning is versioned in `docs/TOM2024_RIGHTS_REVIEW.md`.
 
-**Status:** analysis and metadata reconciled; figure-rights/release decision pending.
+Prepared final files:
+
+- `figures/supplementary/Figure_S7_GradCAM_TOM2024_rust.pdf`
+- `figures/supplementary/Figure_S7_GradCAM_TOM2024_rust.png`
+
+Expected SHA-256 values are `37e1fd652bb00cfeccd0491355f4407c14739d94d6d46853e38375852b2e610d` (PDF) and `8729048bd63a367a9b48181e8ffbbb7df8367a7a8793b9464779223a5ce85585` (PNG). The final PDF was rendered and visually inspected after the attribution footer was added.
+
+**Status:** rights reviewed, attribution embedded, final figure prepared and hash-registered; binary transfer to GitHub is pending.
 
 ## Machine-checkable reconciliation
 
-- `manifests/supplementary_reconciliation_expected_sha256.csv` registers the final S5/S6 binary fingerprints.
-- `scripts/verify_supplementary_reconciliation.py` verifies the authoritative S5/S6 source tables and, when binaries are present, their byte sizes and SHA-256 values. Normal verification tolerates pending binary transfer; strict release mode requires all four final figure files.
+- `manifests/supplementary_reconciliation_expected_sha256.csv` registers the final S5/S6/S7 binary fingerprints.
+- `scripts/verify_supplementary_reconciliation.py` verifies the authoritative S5/S6 source tables and, when binaries are present, all registered supplementary figure byte sizes and SHA-256 values. Normal verification tolerates pending binary transfer; strict release mode requires all registered final figure files.
 - `scripts/verify_ranking_stability.py` verifies the manuscript-facing Kendall W and internal-selection-loss outputs.
 
 ## Submission rule
 
-Do not submit the supplement with references to S18/S19/S5/S6/S7 unresolved. S5 and S6 are now analytically finalized, but their binaries and the formatted S18/S19 sections still need to be inserted into the final supplementary package. Figure S7 remains contingent on source-rights review. The repository must remain private until the complete release audit and the manuscript's data-sharing decision are finalized.
+Do not submit the supplement with references to S18/S19/S5/S6/S7 unresolved. S5, S6, and S7 are now analytically/release-rights reconciled, but their binaries and the formatted S18/S19 sections still need to be inserted into the final supplementary Word package. The repository must remain private until the complete release audit and the manuscript's data-sharing decision are finalized.
