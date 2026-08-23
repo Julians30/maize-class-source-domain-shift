@@ -4,7 +4,7 @@
 
 **Private — pre-submission reconciliation in progress.**
 
-The repository is aligned to the current maize manuscript and supplementary material at the level of core protocol, frozen-run registry, principal internal inference, class–source controls, external-evaluation summaries, exact internal blocked inference, architecture-ranking stability, TOM2024 classwise uncertainty, computational-cost evidence, current analytical-figure fingerprints, release-safe Grad-CAM metadata, and audited release manifests for the internal, Pandian2019, PlantVillage, and TOM2024 layers. No claim is made yet that the repository is a complete public release.
+The repository is aligned to the current maize manuscript and supplementary material at the level of core protocol, frozen-run registry, principal internal inference, class–source controls, external-evaluation summaries, exact internal blocked inference, architecture-ranking stability, TOM2024 classwise uncertainty, computational-cost evidence, current analytical-figure fingerprints, release-safe Grad-CAM metadata, audited release manifests for the internal, Pandian2019, PlantVillage, and TOM2024 layers, and canonical repository-wide SHA-256 release-manifest tooling. No claim is made yet that the repository is a complete public release.
 
 ## Confirmed manuscript core
 
@@ -30,6 +30,8 @@ The repository is aligned to the current maize manuscript and supplementary mate
 - The manuscript-facing Word copy and supplementary Word copy retain explicit placeholders only for information that has not yet been legitimately finalized: the public repository DOI/URL and author-confirmed CRediT roles.
 - Two release-safe notebooks have been prepared and audited: zero outputs, zero attachments, no personal Drive paths, and no historical ARTICLE2 tokens remain.
 - Repository scripts audit release scope, notebook safety, manuscript-facing core claims, exact internal blocked randomization, ranking stability/selection loss, supplementary S5/S6/S7 reconciliation, prepared large/binary assets, E2-A internal predictions, Pandian2019 predictions, PlantVillage release assets, and TOM2024 release assets.
+- The final repository-wide integrity procedure is now implemented through `scripts/build_release_manifest.py` and `scripts/verify_release_manifest.py`. The canonical manifest is generated from Git index blobs after all final assets are committed, excludes itself to avoid circular hashing, and is enforced by `make release-check`.
+- The search for a fuller maize software-environment export is closed without version inference: no authoritative E2-A lock file or `pip freeze` was found, so the release reports only the exact environment evidence preserved by the frozen run registry.
 
 ## Manuscript-package reconciliation
 
@@ -69,8 +71,7 @@ Development checks tolerate prepared binaries not yet manually transferred; the 
 
 - transfer the prepared pending-only package contents into their repository paths without committing ZIP archives;
 - transfer the final S5/S6/S7 PDF/PNG binaries;
-- locate an authoritative full software environment export if one exists; otherwise retain only the exact versions documented by the frozen run registry;
-- generate the final repository-wide SHA-256 release manifest after all release assets are present;
-- run the strict repository audit and resolve all remaining failures;
+- after all final assets are committed and the tree is clean, run `make release-manifest`, review and commit `manifests/release_sha256.csv`;
+- run `make release-check` and resolve all remaining strict-audit failures;
 - obtain author-confirmed CRediT roles;
 - only after the repository passes the release audit, decide public visibility / persistent archive DOI and replace the DOI/URL placeholders in manuscript and supplement.
