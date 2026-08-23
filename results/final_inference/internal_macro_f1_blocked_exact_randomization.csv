@@ -1,0 +1,2 @@
+response,design,n_architectures,n_blocks,F_observed,df_architecture,df_residual,exact_extreme_assignments,exact_unique_assignments,p_exact,manuscript_mc_p_approx,preserved_50000_mc_p,conclusion
+macro_f1,randomized_complete_block_seed_as_block,6,3,0.8250817599851454,5,10,270135,518400,0.52109375,0.5198,0.5235495290094198,no_architecture_effect_at_alpha_0.05
