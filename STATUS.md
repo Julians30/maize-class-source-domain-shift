@@ -15,6 +15,7 @@ The repository is aligned to the current maize manuscript and supplementary mate
 - Frozen 18-run registry with configuration, checkpoint, and prediction SHA-256 values is stored in `manifests/e2_run_registry_v4.csv`.
 - Verified E2-A execution evidence recorded in the registry: NVIDIA L4, PyTorch 2.11.0+cu128, timm 1.0.15.
 - Final internal inference layer is stored under `results/final_inference/`, including strict prediction validation, per-run metrics, bootstrap intervals, Holm-adjusted pairwise contrasts, ensemble analyses, selective risk/AURC, per-run and summarized reliability, and class-level consensus difficulty.
+- The internal E2-A macro-F1 architecture-effect discrepancy is resolved by exhaustive blocked randomization. With seed as the block, the observed statistic is `F(5,10)=0.8250817599851454`. Exploiting global treatment-label symmetry reduces the complete randomization space to `6!^2 = 518,400` distinct assignments; 270,135 have `F >= F_observed`, yielding `p_exact = 0.52109375`. This exact result supersedes the Monte Carlo estimates approximately 0.5198 and 0.5235495290. The result and independent verifier are stored in `results/final_inference/internal_macro_f1_blocked_exact_randomization.csv` and `scripts/verify_internal_blocked_exact.py`.
 - All 18 original E2-A internal prediction files have been independently matched to the frozen registry SHA-256 values and transformed into release-safe files with private Drive paths removed; expected release hashes are in `manifests/e2a_internal_prediction_expected_sha256.csv`.
 - All 18 original Pandian2019 prediction files have been independently matched to the frozen registry `external_component_predictions_sha256` values. The release-safe transformation preserves 1,922 unique samples/groups per run, nine class probabilities, and reproduces frozen rust top-1 recall. Derivation and validation are versioned under `manifests/pandian2019_prediction_release_*.csv`.
 - Filtered PlantVillage release assets have been prepared from the preserved 3,852-image pHash layer: 1,330 overlap/near-overlap rows are represented in the audit, 2,522 images remain in the clean manifest, and the manuscript E3 subset contains 1,498 images (1,490 groups) across leaf blight and leaf spot. The consolidated 18-run prediction layer reproduces the stored accuracy, macro-F1, and class recalls. The preserved PlantVillage prediction artifact contains predicted labels/confidence but not nine full per-class probabilities; none are reconstructed or invented. Expected hashes are in `manifests/plantvillage_release_expected_sha256.csv`.
@@ -24,7 +25,7 @@ The repository is aligned to the current maize manuscript and supplementary mate
 - Main analytical figure captions are catalogued, and current PDF hashes have been independently re-verified in `figures/final_pdf_fingerprints_verified.csv`.
 - The older Drive fingerprint catalog is retained as provenance but is known to predate the latest saved Figures 3 and 4.
 - Two release-safe notebooks have been prepared and audited: zero outputs, zero attachments, no personal Drive paths, and no historical ARTICLE2 tokens remain. Their expected hashes are in `manifests/notebook_release_audit.csv`.
-- Repository scripts now audit release scope, notebook safety, manuscript-facing core claims, prepared large/binary assets, E2-A internal predictions, Pandian2019 predictions, PlantVillage release assets, and TOM2024 release assets.
+- Repository scripts now audit release scope, notebook safety, manuscript-facing core claims, the exact internal blocked macro-F1 randomization, prepared large/binary assets, E2-A internal predictions, Pandian2019 predictions, PlantVillage release assets, and TOM2024 release assets.
 
 ## Prepared pending transfer
 
@@ -54,8 +55,6 @@ The repository contains machine-checkable expected hashes and validators for all
 
 ## Important unresolved reconciliation
 
-The manuscript-facing internal blocked macro-F1 permutation p-value remains under reconciliation: the manuscript reports approximately 0.5198, while a preserved 50,000-permutation development artifact reports 0.5235495290 with the same F statistic. The repository does not silently substitute one value for the other.
-
 The candidate training-time PDF is not yet promoted to final Figure S6. Figure S5 still requires final manuscript-facing construction/reconciliation. The Grad-CAM image-bearing composite remains outside the release package pending source-rights review.
 
 ## Pending before release
@@ -65,6 +64,5 @@ The candidate training-time PDF is not yet promoted to final Figure S6. Figure S
 - decide whether Figure S7 / the Grad-CAM image-bearing composite can be redistributed after source-rights review;
 - locate an authoritative full software environment export if one exists; otherwise retain only the exact versions documented by the frozen run registry;
 - generate the final repository-wide SHA-256 release manifest after all release assets are present;
-- resolve the internal permutation-p discrepancy or document the regenerated authoritative analysis;
 - run the strict repository audit and resolve all remaining failures;
 - only then decide public visibility / persistent archive DOI.
