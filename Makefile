@@ -1,4 +1,4 @@
-.PHONY: audit verify verify-pending verify-internal-predictions verify-pandian-predictions verify-plantvillage verify-tom2024 release-check status
+.PHONY: audit verify verify-pending verify-internal-blocked verify-internal-predictions verify-pandian-predictions verify-plantvillage verify-tom2024 release-check status
 
 audit:
 	python scripts/audit_release_scope.py
@@ -8,6 +8,7 @@ verify:
 	python scripts/audit_release_scope.py
 	python scripts/audit_notebooks.py
 	python scripts/verify_core_claims.py
+	python scripts/verify_internal_blocked_exact.py
 	python scripts/verify_pending_transfer.py
 	python scripts/verify_internal_predictions.py
 	python scripts/verify_pandian_predictions.py
@@ -16,6 +17,9 @@ verify:
 
 verify-pending:
 	python scripts/verify_pending_transfer.py
+
+verify-internal-blocked:
+	python scripts/verify_internal_blocked_exact.py
 
 verify-internal-predictions:
 	python scripts/verify_internal_predictions.py
@@ -33,6 +37,7 @@ release-check:
 	python scripts/audit_release_scope.py --strict
 	python scripts/audit_notebooks.py --require
 	python scripts/verify_core_claims.py
+	python scripts/verify_internal_blocked_exact.py
 	python scripts/verify_pending_transfer.py --require-all
 	python scripts/verify_internal_predictions.py --strict
 	python scripts/verify_pandian_predictions.py --strict
