@@ -1,0 +1,4 @@
+selection_rule,selected_architecture,external_domain,metric,best_architecture,best_value,selected_value,absolute_loss,relative_loss_fraction,relative_loss_percent
+highest mean internal E2-A macro-F1,EfficientNet-B0,Pandian2019,rust_recall,ViT-Base/16,0.82865071106486299,0.670482136663198,0.15816857440166499,0.1908748430305568,19.0874843031
+highest mean internal E2-A macro-F1,EfficientNet-B0,PlantVillage filtered,macro_f1,Swin-Tiny,0.32358303829971219,0.11638827476134748,0.20719476353836469,0.64031404311883233,64.0314043119
+highest mean internal E2-A macro-F1,EfficientNet-B0,TOM2024 confirmatory,macro_f1,ResNet50,0.75968418947588334,0.66709311873682642,0.092591070739056924,0.12188100268736247,12.1881002687
