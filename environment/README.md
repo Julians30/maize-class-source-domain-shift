@@ -26,6 +26,14 @@ The authoritative machine-readable source is `manifests/e2_run_registry_v4.csv`,
 | Swin-Tiny | 27,526,275 |
 | ViT-Base/16 | 85,805,577 |
 
+## Search for a fuller environment export
+
+A targeted search of the preserved Drive project and accessible Drive metadata was performed for likely environment artifacts (`requirements`, `pip freeze`, `pip list`, `environment.yml`, and package-version exports). No authoritative maize E2-A full lock file or `pip freeze` was located.
+
+A separate `requirements (1).txt` was found, but its own header identifies it as **Paper #3 Banana** and therefore it is not evidence for this maize experiment and is deliberately excluded from this repository.
+
+Accordingly, the release boundary remains the exact versions above. Adding a reconstructed `requirements.txt` with guessed package versions would reduce, rather than improve, provenance quality.
+
 ## Reproducibility boundary
 
-A complete package lock file should only be added if an authoritative preserved environment export is located. Until then, the versions above are the exact environment evidence available from the frozen run registry and should not be expanded by inference.
+The repository therefore reports the exact software/hardware evidence preserved by the frozen run registry and does not claim a complete environment lock. The release-safe notebooks and machine-readable frozen outputs permit analytical verification without pretending that unrecorded package versions are known.
