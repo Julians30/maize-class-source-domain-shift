@@ -19,6 +19,8 @@ jobs:
         run: python scripts/audit_notebooks.py --require
       - name: Verify manuscript-facing core claims
         run: python scripts/verify_core_claims.py
+      - name: Verify exact internal blocked macro-F1 randomization
+        run: python scripts/verify_internal_blocked_exact.py
       - name: Verify prepared transfer assets (strict)
         run: python scripts/verify_pending_transfer.py --require-all
       - name: Verify release-safe E2-A internal predictions (strict)
