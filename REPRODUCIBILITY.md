@@ -32,6 +32,19 @@ The release package should support, where applicable:
 
 Release assets should be accompanied by SHA-256 manifests. Frozen split and prediction files should not be regenerated after final statistical reconciliation. Where a historical artifact and a manuscript-facing reconciled asset differ, both the mapping and the reason for the difference must be documented.
 
+The final repository-wide integrity layer is `manifests/release_sha256.csv`. It is generated only after all final release assets are committed, from Git index blobs rather than working-tree bytes. The manifest excludes itself to avoid circular hashing. `scripts/verify_release_manifest.py` then verifies exact coverage, byte counts, and SHA-256 values against the committed repository state.
+
+Canonical sequence:
+
+```bash
+make verify
+# transfer and commit every final release asset
+make release-manifest
+git add manifests/release_sha256.csv
+git commit -m "Freeze repository-wide release SHA-256 manifest"
+make release-check
+```
+
 ## Release-safe notebooks
 
 Notebooks intended for repository release should preserve code and Markdown while removing bulky execution outputs, embedded image outputs, credentials, local/private paths where avoidable, and any raw third-party image content not cleared for redistribution.
