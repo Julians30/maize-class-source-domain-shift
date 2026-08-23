@@ -1,10 +1,10 @@
 # Supplementary-material reconciliation
 
-The current supplementary Word document ends at **Table S17** and **Figure S4**, while the main manuscript cites additional assets in Sections 3.8–3.9 and in the Grad-CAM description. The analyses themselves are preserved and reconciled; the Word supplement still needs the final S18/S19/S5/S6/S7 insertion before submission.
+The manuscript-referenced supplementary block is now analytically reconciled. The pre-submission Word copy contains **Table S18, Figure S5, Table S19, Figure S6, and Figure S7** in the correct order. The 15-page document was rendered after the final layout correction and visually inspected page by page.
 
 ## Ranking stability and selection loss
 
-The four manuscript-facing architecture rankings are now stored in `results/ranking_stability/architecture_domain_rank_matrix.csv`. Descending ranks are:
+The four manuscript-facing architecture rankings are stored in `results/ranking_stability/architecture_domain_rank_matrix.csv`. Descending ranks are:
 
 - EfficientNet-B0: internal 1, Pandian2019 2, PlantVillage 6, TOM2024 3.
 - MobileNetV3-Large: 4, 3, 5, 2.
@@ -13,88 +13,93 @@ The four manuscript-facing architecture rankings are now stored in `results/rank
 - Swin-Tiny: 6, 5, 1, 4.
 - ViT-Base/16: 5, 1, 3, 6.
 
-The rank sums yield `S = 10` and **Kendall W = 0.03571428571428571**. The chi-square approximation is 0.7142857142857142 with 5 degrees of freedom, giving **p ≈ 0.9821754508742055**. This reproduces the manuscript's near-zero cross-domain rank concordance.
+The rank sums yield `S = 10` and **Kendall W = 0.03571428571428571**. The chi-square approximation is 0.7142857142857142 with 5 degrees of freedom, giving **p ≈ 0.9821754508742055**.
 
-Selecting EfficientNet-B0 solely by the highest mean internal E2-A macro-F1 produces the following exact losses relative to the best architecture within each external domain: Pandian2019 0.15816857440166499 (19.0875%), PlantVillage 0.20719476353836469 (64.0314%), and TOM2024 0.092591070739056924 (12.1881%). These are stored in `results/ranking_stability/internal_selection_loss.csv`. `scripts/verify_ranking_stability.py` independently recomputes the rank concordance and selection losses from the machine-readable rank matrix.
+Selecting EfficientNet-B0 solely by the highest mean internal E2-A macro-F1 produces exact losses relative to the best architecture within each external domain of 0.15816857440166499 in Pandian2019, 0.20719476353836469 in PlantVillage, and 0.092591070739056924 in TOM2024. `scripts/verify_ranking_stability.py` independently checks these outputs.
 
-## Missing manuscript-referenced assets
+## Table S18 — TOM2024 classwise uncertainty
 
-### Table S18 — TOM2024 classwise uncertainty
-
-**Purpose in manuscript:** bootstrap 95% intervals for precision, recall, and F1 by confirmatory TOM2024 class and architecture.
-
-**Authoritative source:**
+Authoritative source:
 
 - `results/external/tom2024/tom2024_classwise_bootstrap_ci.csv`
 
-This source contains 10,000-replicate stratified group-bootstrap intervals. It reproduces the manuscript statement that ResNet50 rust recall is 0.28368794326241137 with 95% interval 0.2127659574468085–0.35815602836879434.
+The source contains 10,000-replicate stratified group-bootstrap intervals and reproduces the manuscript result that ResNet50 rust recall is 0.28368794326241137 with 95% interval 0.2127659574468085–0.35815602836879434.
 
-**Status:** source data located and versioned; formatted Table S18 still needs to be inserted into the supplementary Word document.
+**Status:** formatted Table S18 is inserted into the reconciled supplementary Word copy.
 
-### Figure S5 — TOM2024 classwise uncertainty
+## Figure S5 — TOM2024 classwise uncertainty
 
-A final manuscript-facing figure has now been generated directly from the authoritative classwise bootstrap table. It displays recall and 95% stratified group-bootstrap intervals for the six architectures across the three confirmatory categories: fall-armyworm presence (n=581), healthy leaf (n=555), and rust (n=94).
-
-Prepared final files:
+Final files:
 
 - `figures/supplementary/Figure_S5_TOM2024_classwise_recall_uncertainty.pdf`
 - `figures/supplementary/Figure_S5_TOM2024_classwise_recall_uncertainty.png`
 
-The PDF was rendered and visually inspected after generation. Its expected SHA-256 is `b9e5d25a957afa1f156e29d200be50a045debf1d4c7af2c53f12168b4a5a854a`.
+The figure displays recall and 95% stratified group-bootstrap intervals for the six architectures across fall-armyworm presence (n=581), healthy leaf (n=555), and rust (n=94). The PDF was rendered and visually inspected after generation.
 
-**Status:** finalized and hash-registered; binary transfer to GitHub is pending.
+**Status:** finalized, inserted in the supplementary Word copy, and hash-registered; repository binary transfer remains pending.
 
-### Table S19 — training time / computational cost
+## Table S19 — training time / computational cost
 
-**Authoritative sources:**
+Authoritative sources:
 
 - `results/computational_cost/training_time_table_for_manuscript.csv`
 - `results/computational_cost/training_time_summary_by_architecture.csv`
 
-These contain the E2-A NVIDIA L4 training-time summaries cited in Section 3.9.
+These contain the E2-A NVIDIA L4 timing summaries cited in Section 3.9.
 
-**Status:** source data located and versioned; formatted Table S19 still needs to be inserted into the supplementary Word document.
+**Status:** formatted Table S19 is inserted into the reconciled supplementary Word copy.
 
-### Figure S6 — training-time / cost figure
+## Figure S6 — training-time / cost figure
 
-The preserved candidate `Figure_l4_training_time_vs_macro_f1.pdf` was reconciled against the six architecture-level E2-A NVIDIA L4 timing rows. The plotted x-axis is mean E2-A training time in minutes and the y-axis is mean internal macro-F1. The six source means are 201.4898, 228.6013, 223.5429, 263.3948, 305.7562, and 333.0950 minutes for EfficientNet-B0, MobileNetV3-Large, MobileViT-S, ResNet50, Swin-Tiny, and ViT-Base/16, respectively. The reconstructed total across 18 runs is approximately 77.794 GPU-hours.
+The preserved candidate `Figure_l4_training_time_vs_macro_f1.pdf` was reconciled against the six architecture-level E2-A NVIDIA L4 timing rows and promoted without changing its bytes. The final PDF retains SHA-256 `791a7a2c650cebf007805dd7f791690a7199b3e32f8b4572e9933ddb2dcf66ca`.
 
-The reconciled candidate is promoted under the final manuscript-facing filename **without changing its bytes**, so the final PDF retains SHA-256 `791a7a2c650cebf007805dd7f791690a7199b3e32f8b4572e9933ddb2dcf66ca`.
-
-Prepared final files:
+Final files:
 
 - `figures/supplementary/Figure_S6_training_time_vs_macro_f1.pdf`
 - `figures/supplementary/Figure_S6_training_time_vs_macro_f1.png`
 
-The final PDF was rendered and visually inspected after promotion.
+The figure was rendered and visually inspected. During final Word QA, its caption was corrected so it no longer states that horizontal error bars are displayed; the between-seed timing dispersion is instead explicitly referred to Table S19.
 
-**Status:** reconciled, promoted, and hash-registered; binary transfer to GitHub is pending.
+**Status:** finalized, inserted, and hash-registered; repository binary transfer remains pending.
 
-### Figure S7 — full Grad-CAM panel
+## Figure S7 — full Grad-CAM panel
 
-The preserved Grad-CAM analysis contains four correct and four incorrect TOM2024 rust cases for ResNet50 seed 17. Release-safe metadata are stored in:
+The preserved analysis contains four correct and four incorrect TOM2024 rust cases for ResNet50 seed 17. Release-safe metadata are stored in:
 
 - `gradcam/gradcam_selected_cases_release.csv`
 - `gradcam/gradcam_validated_records_release.csv`
 - `gradcam/gradcam_final_summary_release.json`
 
-The TOM2024 Mendeley Data record (`10.17632/3d4yg89rtr.1`) explicitly identifies the dataset licence as **CC BY 4.0**. Under that licence the source images may be redistributed and adapted with attribution, licence identification/link, and indication of changes. The final manuscript-facing Grad-CAM figure therefore embeds a source/licence attribution in the figure itself and states that the source images were modified by the displayed Grad-CAM overlays. The rights determination is specific to TOM2024 and does not extend to the other image sources in the corpus. Full reasoning is versioned in `docs/TOM2024_RIGHTS_REVIEW.md`.
+The TOM2024 Mendeley Data record (`10.17632/3d4yg89rtr.1`) is documented as **CC BY 4.0**. The final manuscript-facing Grad-CAM composite embeds source attribution, licence identification, and a statement that Grad-CAM overlays modify the source images. The rights determination is specific to TOM2024 and does not extend to other corpus sources. Full reasoning is versioned in `docs/TOM2024_RIGHTS_REVIEW.md`.
 
-Prepared final files:
+Final files:
 
 - `figures/supplementary/Figure_S7_GradCAM_TOM2024_rust.pdf`
 - `figures/supplementary/Figure_S7_GradCAM_TOM2024_rust.png`
 
-Expected SHA-256 values are `37e1fd652bb00cfeccd0491355f4407c14739d94d6d46853e38375852b2e610d` (PDF) and `8729048bd63a367a9b48181e8ffbbb7df8367a7a8793b9464779223a5ce85585` (PNG). The final PDF was rendered and visually inspected after the attribution footer was added.
+Expected SHA-256 values are `37e1fd652bb00cfeccd0491355f4407c14739d94d6d46853e38375852b2e610d` (PDF) and `8729048bd63a367a9b48181e8ffbbb7df8367a7a8793b9464779223a5ce85585` (PNG).
 
-**Status:** rights reviewed, attribution embedded, final figure prepared and hash-registered; binary transfer to GitHub is pending.
+**Status:** rights reviewed, attribution embedded, final figure inserted in the supplementary Word copy, and hashes registered; repository binary transfer remains pending.
+
+## Word-package QA
+
+The reconciled supplementary copy is `Material_suplementario_Maiz_Q1_FINAL_REVISADO.docx`, SHA-256 `d2585effd67e84552bbab645d2a5816c5439dbf87fe43d0c617cc00cb73a805d`.
+
+During QA, an initial construction defect was found: the S5/S6/S7 image paragraphs had been appended after the references instead of appearing with their sections. The OOXML block order was corrected so that:
+
+1. Table S18 precedes its table and Figure S5 follows the S18 note;
+2. Table S19 precedes its table and Figure S6 follows the S19 note;
+3. Figure S7 appears inside S16 before the source-attribution paragraph;
+4. the references remain at the end of the document.
+
+After correction, all 15 rendered pages were inspected and no clipping, overlap, broken tables, or misplaced figures remained.
 
 ## Machine-checkable reconciliation
 
 - `manifests/supplementary_reconciliation_expected_sha256.csv` registers the final S5/S6/S7 binary fingerprints.
-- `scripts/verify_supplementary_reconciliation.py` verifies the authoritative S5/S6 source tables and, when binaries are present, all registered supplementary figure byte sizes and SHA-256 values. Normal verification tolerates pending binary transfer; strict release mode requires all registered final figure files.
+- `scripts/verify_supplementary_reconciliation.py` verifies the authoritative sources and, in strict mode, requires all registered final figure files.
 - `scripts/verify_ranking_stability.py` verifies the manuscript-facing Kendall W and internal-selection-loss outputs.
 
-## Submission rule
+## Remaining submission placeholders
 
-Do not submit the supplement with references to S18/S19/S5/S6/S7 unresolved. S5, S6, and S7 are now analytically/release-rights reconciled, but their binaries and the formatted S18/S19 sections still need to be inserted into the final supplementary Word package. The repository must remain private until the complete release audit and the manuscript's data-sharing decision are finalized.
+The supplementary Word copy intentionally retains only the repository DOI/URL placeholder because no public persistent identifier has yet been finalized. Do not invent or insert that identifier before the repository passes its strict release audit.
