@@ -28,3 +28,5 @@ jobs:
         run: python scripts/verify_internal_predictions.py
       - name: Verify release-safe Pandian2019 predictions when present
         run: python scripts/verify_pandian_predictions.py
+      - name: Verify release-safe TOM2024 assets when present
+        run: python scripts/verify_tom2024_release.py
