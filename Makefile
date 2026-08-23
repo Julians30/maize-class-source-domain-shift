@@ -1,4 +1,4 @@
-.PHONY: audit verify verify-pending verify-internal-blocked verify-internal-predictions verify-pandian-predictions verify-plantvillage verify-tom2024 release-check status
+.PHONY: audit verify verify-pending verify-internal-blocked verify-ranking verify-supplementary verify-internal-predictions verify-pandian-predictions verify-plantvillage verify-tom2024 release-check status
 
 audit:
 	python scripts/audit_release_scope.py
@@ -9,6 +9,8 @@ verify:
 	python scripts/audit_notebooks.py
 	python scripts/verify_core_claims.py
 	python scripts/verify_internal_blocked_exact.py
+	python scripts/verify_ranking_stability.py
+	python scripts/verify_supplementary_reconciliation.py
 	python scripts/verify_pending_transfer.py
 	python scripts/verify_internal_predictions.py
 	python scripts/verify_pandian_predictions.py
@@ -20,6 +22,12 @@ verify-pending:
 
 verify-internal-blocked:
 	python scripts/verify_internal_blocked_exact.py
+
+verify-ranking:
+	python scripts/verify_ranking_stability.py
+
+verify-supplementary:
+	python scripts/verify_supplementary_reconciliation.py
 
 verify-internal-predictions:
 	python scripts/verify_internal_predictions.py
@@ -38,6 +46,8 @@ release-check:
 	python scripts/audit_notebooks.py --require
 	python scripts/verify_core_claims.py
 	python scripts/verify_internal_blocked_exact.py
+	python scripts/verify_ranking_stability.py
+	python scripts/verify_supplementary_reconciliation.py --strict
 	python scripts/verify_pending_transfer.py --require-all
 	python scripts/verify_internal_predictions.py --strict
 	python scripts/verify_pandian_predictions.py --strict
@@ -47,4 +57,4 @@ release-check:
 status:
 	@echo "Repository is in private pre-submission reconciliation."
 	@echo "Run 'make verify' for current-stage checks; missing prepared large/binary assets are reported as PENDING, not as failures."
-	@echo "Run 'make release-check' only after the prepared core, E2-A, Pandian2019, PlantVillage, TOM2024, and final repository-wide SHA-256 manifest have been transferred."
+	@echo "Run 'make release-check' only after the prepared core, supplementary S5/S6, E2-A, Pandian2019, PlantVillage, TOM2024, and final repository-wide SHA-256 assets have been transferred."
