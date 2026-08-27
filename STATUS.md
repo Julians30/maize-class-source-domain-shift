@@ -2,55 +2,60 @@
 
 ## Current state
 
-**Private — pre-submission reproducibility hardening.**
+**Private — pre-submission reproducibility package.**
 
-The scientific results remain frozen. The repository now contains the canonical reviewer-facing internal E2-A comparison and final paired-inference code, together with machine-checkable provenance and SHA-256 integrity records. No model was retrained and no frozen result was regenerated during this repository hardening.
+The scientific results are frozen. No model was retrained and no frozen result was regenerated during repository hardening.
 
-## Confirmed scientific core
+## Pre-submission code status
 
-- Frozen master corpus: 13,413 images / 13,407 similarity groups.
-- Six architectures × three seeds = 18 frozen runs.
-- Principal internal E2-A test: 1,719 images.
-- External manuscript domains: Pandian2019, filtered PlantVillage, and TOM2024.
-- Recorded E2-A execution evidence: NVIDIA L4, PyTorch `2.11.0+cu128`, timm `1.0.15`.
-- Exact blocked internal macro-F1 architecture test: `F(5,10)=0.8250817599851454`, `p_exact=0.52109375` from 518,400 distinct assignments.
-- Four-axis architecture-ranking stability and external selection-loss analyses are stored under `results/ranking_stability/`.
+- 2 canonical release-safe manuscript notebooks are versioned.
+- Canonical internal comparison and final paired-inference source are SHA-256 audited.
+- 10 provenance modules cover protocol/splits, dataloaders, E2 training/evaluation, 18-checkpoint evaluation, consolidated E2-A analysis, class–source shortcut control, PlantVillage, TOM2024, classwise uncertainty, Grad-CAM and computational time.
+- Repository CI verifies canonical code, provenance code, core claims, exact blocked randomization, ranking stability, supplementary reconciliation and external-layer controlling manifests.
 
-## Canonical code layer — versioned
+## Frozen scientific core
 
-Two release-safe notebooks are present:
+- master corpus: 13,413 images / 13,407 similarity groups;
+- 6 architectures × 3 seeds = 18 frozen runs;
+- principal internal E2-A test: 1,719 images;
+- external manuscript domains: Pandian2019, filtered PlantVillage and TOM2024;
+- exact blocked internal macro-F1 test: 518,400 distinct assignments, `p_exact = 0.52109375`.
 
-- `notebooks/02_internal_comparison_E2A_release.ipynb`
-- `notebooks/03_final_paired_inference_release.ipynb`
+## Large-artifact policy
 
-Their complete analytical source is stored under `scripts/analysis/` and `scripts/analysis/fragments/`. Integrity is recorded by:
+Large release-safe prediction tables and manifests are **not required to be duplicated in GitHub during private pre-submission hardening**. Their exact release filenames, byte counts and SHA-256 values are controlled by repository manifests and mapped by `manifests/external_artifact_registry.csv`.
 
-- `manifests/canonical_code_provenance.csv`
-- `manifests/canonical_fragment_sha256.csv`
-- `manifests/notebook_release_audit.csv`
+They are planned for a persistent Zenodo archive at manuscript submission. Until such a deposit exists, the registry must say `PENDING_AT_SUBMISSION`; no DOI is fabricated.
 
-Run:
+The five main PDF figures have been re-located and their frozen hashes revalidated. Figure S6 has also been reconciled by exact SHA-256. Figure S7 remains rights-controlled because it contains image-bearing Grad-CAM material.
+
+## Commands
+
+Current private pre-submission gate:
 
 ```bash
-python scripts/verify_canonical_analysis_code.py
+make presubmission-check
 ```
 
-The historical protocol/split provenance code is also being consolidated under `scripts/analysis/`. Historical E3 split terminology is explicitly not the reporting authority: current manuscript E3 is the filtered PlantVillage external evaluation.
+Normal development validation:
 
-## Release-verification layer
+```bash
+make verify
+```
 
-Repository tooling checks release scope, notebook safety, canonical code integrity, manuscript-facing core claims, exhaustive blocked randomization, ranking stability, supplementary reconciliation, pending assets, internal E2-A predictions, Pandian2019, PlantVillage and TOM2024 layers, plus final repository-wide SHA-256 integrity.
+Final public-release gate, reserved for submission time:
 
-The earlier TOM2024 CI failure was an integrity-manifest mismatch for `protocol/tom2024_mapping_protocol_release.json`; the expected byte count/SHA-256 record has been synchronized with the current audited release-safe protocol file. This correction changes repository integrity metadata, not statistical results.
+```bash
+make release-check
+```
 
-## Remaining before final public release
+The final gate intentionally remains red until all final release requirements, public archive locators and rights decisions are satisfied.
 
-- transfer remaining registered large release-safe manifests and final figure binaries;
-- transfer registered per-image prediction layers that are still outside GitHub;
-- finish consolidation/audit of the remaining historical analysis modules that support external-domain and interpretability provenance;
-- run the full strict audit;
-- generate and commit `manifests/release_sha256.csv` only after the final repository tree is stable;
-- obtain author-confirmed CRediT roles and select a software licence;
-- create the final release / persistent archive DOI only at manuscript-submission time.
+## Remaining submission-time decisions
 
-No claim is made yet that the repository is a complete public release.
+- select/confirm the software licence;
+- confirm final author CRediT roles;
+- create the persistent archive and record its actual DOI/locator;
+- finalize the rights decision for image-bearing Figure S7;
+- freeze the final repository-wide `manifests/release_sha256.csv`;
+- create the release tag only when the manuscript submission package is final.
