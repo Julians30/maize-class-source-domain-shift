@@ -17,11 +17,15 @@ jobs:
         with:
           python-version: '3.12'
       - name: Compile repository scripts
-        run: python -m compileall -q scripts
+        run: python -m compileall -q scripts -x 'scripts/analysis/provenance_fragments/.*'
+      - name: Verify canonical manuscript analysis code
+        run: python scripts/verify_canonical_analysis_code.py
+      - name: Verify provenance analysis code
+        run: python scripts/verify_provenance_analysis_code.py
       - name: Audit release scope
         run: python scripts/audit_release_scope.py
-      - name: Audit release notebooks when present
-        run: python scripts/audit_notebooks.py
+      - name: Audit release notebooks
+        run: python scripts/audit_notebooks.py --require
       - name: Verify manuscript-facing core claims
         run: python scripts/verify_core_claims.py
       - name: Verify exact internal blocked macro-F1 randomization
@@ -40,6 +44,8 @@ jobs:
         run: python scripts/verify_plantvillage_release.py
       - name: Verify release-safe TOM2024 assets when present
         run: python scripts/verify_tom2024_release.py
+      - name: Verify pre-submission external artifact registry
+        run: python scripts/verify_external_artifact_registry.py --presubmission
       - name: Verify canonical release manifest when present
         shell: bash
         run: |

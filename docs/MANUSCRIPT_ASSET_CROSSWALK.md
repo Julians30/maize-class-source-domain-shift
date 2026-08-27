@@ -16,7 +16,8 @@ This document maps the current manuscript to repository assets. The current manu
 | TOM2024 label mapping and no-tuning rules | `protocol/tom2024_mapping_protocol_release.json` | available |
 | 18 frozen checkpoint hashes | `manifests/checkpoints_tom2024_verified_release.csv` | available |
 | Verified E2-A runtime evidence | `environment/README.md`, `manifests/e2_run_registry_v4.csv` | available: NVIDIA L4, PyTorch 2.11.0+cu128, timm 1.0.15 |
-| Release-safe notebook audit | `manifests/notebook_release_audit.csv`, `notebooks/README.md` | available; two sanitized notebooks prepared, pending transfer |
+| Release-safe manuscript notebooks | `notebooks/02_internal_comparison_E2A_release.ipynb`, `notebooks/03_final_paired_inference_release.ipynb` | available and versioned; zero outputs/attachments/private paths |
+| Canonical notebook/code provenance | `manifests/canonical_code_provenance.csv`, `manifests/canonical_fragment_sha256.csv`, `scripts/verify_canonical_analysis_code.py` | available and CI-enforced |
 
 ## Main results
 
@@ -44,7 +45,7 @@ This document maps the current manuscript to repository assets. The current manu
 | Training-time / Table S19 source | `results/computational_cost/training_time_table_for_manuscript.csv`, `training_time_summary_by_architecture.csv`, `training_time_audit_by_run_release.csv` | available |
 | Main analytical figure captions | `figures/figure_captions.csv` | available |
 | Current final PDF figure fingerprints | `figures/final_pdf_fingerprints_verified.csv` | available and re-verified against current Drive files; historical `figure_fingerprints.csv` is retained as provenance but is stale for the later Fig. 3/4 files |
-| Grad-CAM selected cases and frozen/recomputed agreement | `gradcam/gradcam_selected_cases_release.csv`, `gradcam_validated_records_release.csv`, `gradcam_final_summary_release.json` | metadata available; image-bearing composite pending rights review |
+| Grad-CAM selected cases and frozen/recomputed agreement | `gradcam/gradcam_selected_cases_release.csv`, `gradcam/gradcam_validated_records_release.csv`, `gradcam/gradcam_final_summary_release.json` | metadata available; final image-bearing binary remains a controlled transfer asset |
 
 ## Large authoritative assets still pending transfer
 
@@ -56,10 +57,9 @@ The following preserved files are known or have release-safe versions prepared b
 - Pandian2019 per-image predictions;
 - filtered PlantVillage manifest, overlap audit, and per-image predictions;
 - TOM2024 frozen clean manifest and per-image prediction outputs;
-- current analytical figure PDF binaries whose SHA-256 values are already verified;
-- the two release-safe notebooks listed in `manifests/notebook_release_audit.csv`.
+- current analytical figure PDF binaries whose SHA-256 values are already verified.
 
-A pending-only transfer bundle has been prepared locally for the two full manifests, the two release-safe notebooks, the five current main PDF figures, and the candidate training-time supplementary figure. Per-image prediction outputs will be handled in a subsequent transfer layer. The Grad-CAM image-bearing composite is a separate rights decision and must not be bundled automatically.
+The two canonical manuscript notebooks are already versioned and are no longer part of the pending-transfer list. Remaining binary/large assets retain their expected SHA-256 records and are verified as they are transferred. The Grad-CAM image-bearing composite remains a separate controlled release asset governed by the documented source-rights decision.
 
 ## Important reconciliation rule
 
