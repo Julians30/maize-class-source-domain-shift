@@ -1,15 +1,20 @@
-.PHONY: audit verify verify-canonical verify-pending verify-internal-blocked verify-ranking verify-supplementary verify-internal-predictions verify-pandian-predictions verify-plantvillage verify-tom2024 release-manifest verify-release-manifest release-check status
+.PHONY: audit verify verify-canonical verify-provenance verify-pending verify-internal-blocked verify-ranking verify-supplementary verify-internal-predictions verify-pandian-predictions verify-plantvillage verify-tom2024 release-manifest verify-release-manifest release-check status
 
 verify-canonical:
 	python scripts/verify_canonical_analysis_code.py
 
+verify-provenance:
+	python scripts/verify_provenance_analysis_code.py
+
 audit:
 	python scripts/verify_canonical_analysis_code.py
+	python scripts/verify_provenance_analysis_code.py
 	python scripts/audit_release_scope.py
 	python scripts/audit_notebooks.py --require
 
 verify:
 	python scripts/verify_canonical_analysis_code.py
+	python scripts/verify_provenance_analysis_code.py
 	python scripts/audit_release_scope.py
 	python scripts/audit_notebooks.py --require
 	python scripts/verify_core_claims.py
@@ -54,6 +59,7 @@ verify-release-manifest:
 
 release-check:
 	python scripts/verify_canonical_analysis_code.py
+	python scripts/verify_provenance_analysis_code.py
 	python scripts/audit_release_scope.py --strict
 	python scripts/audit_notebooks.py --require
 	python scripts/verify_core_claims.py
