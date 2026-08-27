@@ -1,24 +1,25 @@
-# Pending large/binary transfer
+# Large and external release artifacts
 
-The two canonical manuscript notebooks are **no longer pending**: they are versioned under `notebooks/` and independently audited through `manifests/notebook_release_audit.csv` and `scripts/verify_canonical_analysis_code.py`.
+The two canonical manuscript notebooks are already versioned under `notebooks/`; they are not pending.
 
-The original pending-only ZIP archives must **not** be committed. Only release-safe unpacked contents should be transferred while preserving repository-relative paths.
+## Pre-submission policy
 
-The first registered transfer layer still contains these remaining large/binary assets:
+Large derived artifacts are controlled by SHA-256 and may remain outside the private GitHub repository until the manuscript-submission archive is created. This is deliberate: GitHub is the code/review surface, while the persistent public archive will carry the large release payload.
 
-- `data/manifests/manifest_master_clean_snapshot_v1_release.csv`;
-- `splits/e2a_adege_to_pandian_manifest_v1_release.csv`;
-- five current main analytical PDF figures;
-- one candidate supplementary training-time PDF, subject to final reconciliation.
+See:
 
-Additional registered prediction layers for E2-A, Pandian2019, PlantVillage and TOM2024 remain governed by their dedicated expected-SHA manifests and verifier scripts.
+- `manifests/external_artifact_registry.csv`
+- `docs/EXTERNAL_ARTIFACTS.md`
+- layer-specific expected-SHA manifests under `manifests/`
 
-The Grad-CAM image-bearing composite remains a separate source-rights/release decision and must not be bundled automatically merely because its analytical metadata are present.
+## Revalidated sources
 
-Use:
+The preserved archive was re-audited on 2026-08-27. The E2-A split source, PlantVillage source layer, TOM2024 source layer and final main figures were re-located. The five main PDF figures matched their frozen hashes exactly. The training-time PDF also matched the final Figure S6 hash exactly.
 
-```bash
-python scripts/verify_pending_transfer.py
-```
+The full source CSV for the master manifest was not re-located in the current search; its source size/hash and release derivation remain frozen in `manifests/manifest_release_derivation.csv`.
 
-Development mode reports missing large assets as pending. Final strict release requires every final registered asset that remains in scope.
+## Final public release
+
+At manuscript submission, create the persistent archive, update the external registry with the real locator/DOI, complete rights decisions, and only then run the strict public-release gate.
+
+Do not commit historical temporary `*_PENDING_ONLY.zip` bundles even if an old copy is located; only canonical unpacked release assets or the persistent archive should be cited.
