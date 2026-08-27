@@ -44,6 +44,8 @@ jobs:
         run: python scripts/verify_plantvillage_release.py
       - name: Verify release-safe TOM2024 assets when present
         run: python scripts/verify_tom2024_release.py
+      - name: Verify pre-submission external artifact registry
+        run: python scripts/verify_external_artifact_registry.py --presubmission
       - name: Verify canonical release manifest when present
         shell: bash
         run: |
