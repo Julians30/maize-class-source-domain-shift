@@ -1,0 +1,8 @@
+asset_group,source_audit_status,public_safe_note
+master_manifest,source_hash_frozen_full_source_not_relocated_current_search,Source size and SHA-256 remain recorded in manifest_release_derivation.csv
+e2a_split,source_relocated,Original 13,413-row E2-A manifest located in preserved reconciliation archive
+plantvillage,source_relocated,Manifest pHash overlap and 18-run prediction sources located
+tom2024,source_relocated,Frozen external evaluation and prediction sources located
+main_figures,source_relocated_hash_matched,Five main PDFs matched frozen byte counts and SHA-256 values
+supplementary_s6,source_relocated_hash_matched,Training-time PDF matched the frozen final Figure S6 SHA-256
+supplementary_s7,rights_controlled,Image-bearing Grad-CAM release remains subject to source-rights decision
