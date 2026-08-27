@@ -1,12 +1,17 @@
-.PHONY: audit verify verify-pending verify-internal-blocked verify-ranking verify-supplementary verify-internal-predictions verify-pandian-predictions verify-plantvillage verify-tom2024 release-manifest verify-release-manifest release-check status
+.PHONY: audit verify verify-canonical verify-pending verify-internal-blocked verify-ranking verify-supplementary verify-internal-predictions verify-pandian-predictions verify-plantvillage verify-tom2024 release-manifest verify-release-manifest release-check status
+
+verify-canonical:
+	python scripts/verify_canonical_analysis_code.py
 
 audit:
+	python scripts/verify_canonical_analysis_code.py
 	python scripts/audit_release_scope.py
-	python scripts/audit_notebooks.py
+	python scripts/audit_notebooks.py --require
 
 verify:
+	python scripts/verify_canonical_analysis_code.py
 	python scripts/audit_release_scope.py
-	python scripts/audit_notebooks.py
+	python scripts/audit_notebooks.py --require
 	python scripts/verify_core_claims.py
 	python scripts/verify_internal_blocked_exact.py
 	python scripts/verify_ranking_stability.py
@@ -48,6 +53,7 @@ verify-release-manifest:
 	python scripts/verify_release_manifest.py
 
 release-check:
+	python scripts/verify_canonical_analysis_code.py
 	python scripts/audit_release_scope.py --strict
 	python scripts/audit_notebooks.py --require
 	python scripts/verify_core_claims.py
@@ -62,6 +68,6 @@ release-check:
 	python scripts/verify_release_manifest.py
 
 status:
-	@echo "Repository is in private pre-submission reconciliation."
-	@echo "Run 'make verify' for current-stage checks; missing prepared large/binary assets are reported as PENDING, not as failures."
-	@echo "After all final assets are committed and the tree is clean, run 'make release-manifest', commit manifests/release_sha256.csv, then run 'make release-check'."
+	@echo "Repository is private and in pre-submission reproducibility hardening."
+	@echo "Run 'make verify' for current-stage checks."
+	@echo "Use 'make release-check' only after every final registered release asset and release_sha256.csv are committed."

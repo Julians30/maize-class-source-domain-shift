@@ -1,21 +1,24 @@
 # Pending large/binary transfer
 
-A pending-only transfer package has been prepared outside the repository for assets that cannot be moved reliably through the text-side GitHub connector.
+The two canonical manuscript notebooks are **no longer pending**: they are versioned under `notebooks/` and independently audited through `manifests/notebook_release_audit.csv` and `scripts/verify_canonical_analysis_code.py`.
 
-Package name: `maize-class-source-domain-shift_GITHUB_PENDING_ONLY.zip`
+The original pending-only ZIP archives must **not** be committed. Only release-safe unpacked contents should be transferred while preserving repository-relative paths.
 
-Package SHA-256: `928dc861e744135f61dd4d84165e626bf27cabd55313dd4773646f81bfdc59eb`
+The first registered transfer layer still contains these remaining large/binary assets:
 
-The ZIP itself must **not** be committed. Its contents should be copied into the repository root while preserving paths.
-
-Expected target-file hashes are versioned in `manifests/pending_transfer_expected_sha256.csv`. Run `python scripts/verify_pending_transfer.py` to verify any files already transferred, or `python scripts/verify_pending_transfer.py --require-all` after the whole package has been copied.
-
-Current package contents include:
-
-- release-safe full master-corpus manifest;
-- release-safe full E2-A split manifest;
-- two output-stripped/path-parameterized notebooks plus their audit;
+- `data/manifests/manifest_master_clean_snapshot_v1_release.csv`;
+- `splits/e2a_adege_to_pandian_manifest_v1_release.csv`;
 - five current main analytical PDF figures;
-- one explicitly named candidate supplementary training-time PDF.
+- one candidate supplementary training-time PDF, subject to final reconciliation.
 
-The Grad-CAM image-bearing composite is intentionally excluded pending source-rights review. Per-image prediction outputs are not in this first pending package and remain a later transfer layer.
+Additional registered prediction layers for E2-A, Pandian2019, PlantVillage and TOM2024 remain governed by their dedicated expected-SHA manifests and verifier scripts.
+
+The Grad-CAM image-bearing composite remains a separate source-rights/release decision and must not be bundled automatically merely because its analytical metadata are present.
+
+Use:
+
+```bash
+python scripts/verify_pending_transfer.py
+```
+
+Development mode reports missing large assets as pending. Final strict release requires every final registered asset that remains in scope.

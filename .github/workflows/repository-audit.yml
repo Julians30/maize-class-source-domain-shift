@@ -18,10 +18,12 @@ jobs:
           python-version: '3.12'
       - name: Compile repository scripts
         run: python -m compileall -q scripts
+      - name: Verify canonical manuscript analysis code
+        run: python scripts/verify_canonical_analysis_code.py
       - name: Audit release scope
         run: python scripts/audit_release_scope.py
-      - name: Audit release notebooks when present
-        run: python scripts/audit_notebooks.py
+      - name: Audit release notebooks
+        run: python scripts/audit_notebooks.py --require
       - name: Verify manuscript-facing core claims
         run: python scripts/verify_core_claims.py
       - name: Verify exact internal blocked macro-F1 randomization

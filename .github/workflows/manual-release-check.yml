@@ -13,6 +13,10 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Compile repository scripts
+        run: python -m compileall -q scripts
+      - name: Verify canonical manuscript analysis code
+        run: python scripts/verify_canonical_analysis_code.py
       - name: Audit release scope (strict)
         run: python scripts/audit_release_scope.py --strict
       - name: Audit release notebooks (strict)
@@ -35,6 +39,8 @@ jobs:
         run: python scripts/verify_plantvillage_release.py --strict
       - name: Verify release-safe TOM2024 assets (strict)
         run: python scripts/verify_tom2024_release.py --strict
+      - name: Verify repository-wide release manifest
+        run: python scripts/verify_release_manifest.py
       - name: Confirm no unresolved release markers
         run: |
           if grep -R -n -E 'COMPLETAR ANTES DEL ENV[IÍ]O|\[Añadir DOI|TODO_RELEASE|RECONCILIATION_REQUIRED' --exclude-dir=.git . ; then
