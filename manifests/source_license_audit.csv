@@ -1,0 +1,9 @@
+source_or_local_component,verified_record,license_or_rights_status,release_decision
+CCMT / raw_ccmt_clean,"Mensah et al. (2023), Data in Brief 49, 109306, DOI 10.1016/j.dib.2023.109306; associated Mendeley Data record 10.17632/bwh3zbpkpv.1",CC BY 4.0,"Raw images are not duplicated in the project repository; attribution is required if redistributed."
+Adege_field_smartphone; Adege_rust_rss,"Adege (2026), Mendeley Data 10.17632/6w6gsvghfw.1",CC BY 4.0,"Release-safe manifests and hashes may be shared; raw redistribution requires attribution and preserved provenance."
+Pandian2019,"Arun Pandian & Geetharamani (2019), Mendeley Data 10.17632/tywbtsjrjv.1",CC0 1.0,"Original dataset is cited rather than duplicated in the project repository."
+PlantVillage external audit/evaluation,"Mohanty et al. (2016); exact historical local mirror chain not fully reconstructed","Open-access upstream; exact local-mirror license not asserted","No raw-image redistribution from the historical local mirror; release is limited to hashes, overlap summaries and derived predictions."
+TOM2024,"Appiah et al. (2025), Data in Brief 59, 111357; Mendeley Data 10.17632/3d4yg89rtr.1",CC BY 4.0,"Derived Grad-CAM panels may be shared with attribution, license identification and a modification notice."
+Rahman2026 audit target,"Rahman (2026), Mendeley Data 10.17632/hmkd6nbngr.1",CC BY 4.0,"Audited as a candidate upstream dataset; no direct overlap was attributed and no raw images are redistributed."
+CIMMYT_MLND,"Historical local component; exact upstream image record not reconstructed","Not independently verified for the exact local asset","No raw redistribution; analytical manifests only."
+Kaggle_HEALTHY_up; Kaggle_Healthy_paren,"Historical local Kaggle-derived components; exact upstream mirror terms not reconstructed","Not independently verified for the exact local mirrors","No raw redistribution; release is limited to derived manifests, hashes and predictions."
