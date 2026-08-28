@@ -1,6 +1,6 @@
 # Manuscript-to-repository asset crosswalk
 
-This document maps the current manuscript to repository assets. The current manuscript and supplementary material are the reporting authority. Historical project folder names such as `ARTICLE2_*` are development provenance only.
+This document maps the current manuscript and supplementary material to repository assets. The current English pre-submission manuscript and supplementary material are the reporting authority. Historical project folder names such as `ARTICLE2_*` are development provenance only.
 
 ## Core design
 
@@ -43,9 +43,22 @@ This document maps the current manuscript to repository assets. The current manu
 | TOM2024 blocked architecture effect | `results/external/tom2024/D_estadistica_bloqueada_TOM2024.csv` | available |
 | TOM2024 classwise bootstrap uncertainty / Table S18 source | `results/external/tom2024/tom2024_classwise_bootstrap_ci.csv` | available |
 | Training-time / Table S19 source | `results/computational_cost/training_time_table_for_manuscript.csv`, `training_time_summary_by_architecture.csv`, `training_time_audit_by_run_release.csv` | available |
+| Source-license / redistribution audit / Table S20 | `data/provenance/inventario_fuentes_estado_auditoria_final.csv`, `docs/TOM2024_RIGHTS_REVIEW.md`, manuscript data-governance text | analytically reconciled; uncertain historical local mirrors remain under conservative no-redistribution policy |
+| Architecture–seed descriptive SS decomposition / Table S21 | `results/final_inference/02_point_metrics_by_run.csv`, `results/external/plantvillage/B_resultados_plantvillage.csv`, `results/external/tom2024/D_estadistica_bloqueada_TOM2024.csv` | available; calculated separately within each response axis; residual includes non-estimable architecture×seed interaction |
 | Main analytical figure captions | `figures/figure_captions.csv` | available |
-| Current final PDF figure fingerprints | `figures/final_pdf_fingerprints_verified.csv` | available and re-verified against current Drive files; historical `figure_fingerprints.csv` is retained as provenance but is stale for the later Fig. 3/4 files |
+| Current final PDF figure fingerprints | `figures/final_pdf_fingerprints_verified.csv` | available and re-verified against current Drive files; historical `figure_fingerprints.csv` is retained as provenance but is stale for later figure files |
 | Grad-CAM selected cases and frozen/recomputed agreement | `gradcam/gradcam_selected_cases_release.csv`, `gradcam/gradcam_validated_records_release.csv`, `gradcam/gradcam_final_summary_release.json` | metadata available; final image-bearing binary remains a controlled transfer asset |
+
+## Final pre-submission reporting state
+
+- Main manuscript: English, MDPI numeric citations, **54 references** ordered by first appearance.
+- Abstract: **193 words**.
+- Main figures: **Figure 1–Figure 4**, including the methodological workflow as Figure 1.
+- Supplement: **Table S1–Table S21** and **Figure S1–Figure S7**.
+- Supplementary references reuse the numbering of the main reference list; no supplementary-only bibliography is introduced.
+- Table S20 records source-level license/rights and redistribution decisions.
+- Table S21 records the descriptive architecture–seed sum-of-squares partition by evaluation axis.
+- The scientific results, frozen checkpoints, splits, and statistical outputs were not changed during the final language/reference alignment.
 
 ## Large authoritative assets still pending transfer
 
