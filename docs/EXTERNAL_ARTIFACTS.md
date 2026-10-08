@@ -2,13 +2,13 @@
 
 ## Purpose
 
-This repository separates the **reviewer-facing analytical code** from large derived artifacts. All code, canonical notebooks, statistical summaries, integrity manifests and verification scripts are versioned in GitHub. Large release-safe manifests and image-level prediction tables are controlled by SHA-256 manifests and are planned for a persistent Zenodo archive at manuscript submission.
+This repository separates the **reviewer-facing analytical code** from large derived artifacts. All code, canonical notebooks, statistical summaries, integrity manifests and verification scripts are versioned in GitHub. Large derived manifests and image-level prediction tables are tracked by SHA-256 records. Publication or download availability for each artifact must be confirmed independently. No external archival deposit or DOI is claimed.
 
 This policy does **not** apply to original third-party images. Raw-image redistribution remains governed by the source-specific rights documented in `DATA_RIGHTS.md`.
 
 ## Pre-submission state
 
-The repository is currently private. The public archive locator is intentionally recorded as `PENDING_AT_SUBMISSION`; no DOI is invented before a deposit exists.
+The GitHub repository is public. Entries such as `PENDING_AT_SUBMISSION` in historical registries denote artifacts whose public availability has not been confirmed; they are not valid download links or DOIs.
 
 `manifests/external_artifact_registry.csv` maps six controlled layers to their authoritative hash manifests:
 
