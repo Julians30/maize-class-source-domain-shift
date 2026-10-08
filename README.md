@@ -48,7 +48,7 @@ The repository machine-checks the manuscript-facing inferential layer, including
 
 ## Validation
 
-For the private pre-submission package:
+For the pre-submission verification package:
 
 ```bash
 make presubmission-check
@@ -68,9 +68,9 @@ make release-check
 
 ## Large derived artifacts
 
-GitHub is the code/review surface. Large release-safe prediction tables and manifests are cryptographically registered in `manifests/external_artifact_registry.csv` and are planned for a persistent Zenodo archive when the manuscript is submitted.
+GitHub is the code/review surface. Large derived prediction tables and manifests are tracked in `manifests/external_artifact_registry.csv` with provenance and integrity information. Public availability of individual large artifacts must be verified against the repository contents and links before claiming that they can be downloaded. GitHub is the designated project code and documentation repository; no external archive or DOI is claimed.
 
-No DOI is claimed before the archive exists. Original third-party maize images are not automatically redistributed.
+Original third-party maize images are not automatically redistributed.
 
 See `docs/EXTERNAL_ARTIFACTS.md`, `DATA_RIGHTS.md`, `REPRODUCIBILITY.md` and `STATUS.md`.
 
