@@ -2,7 +2,7 @@
 
 ## Current state
 
-**Private — pre-submission reproducibility package.**
+**Public — pre-submission reproducibility package; large derived-asset release not yet complete.**
 
 The scientific results are frozen. No model was retrained and no frozen result was regenerated during repository hardening.
 
