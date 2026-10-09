@@ -34,7 +34,7 @@ The full source CSV corresponding to the master-manifest source hash was not re-
 
 ## Checks
 
-For the current private pre-submission package:
+For the current public pre-submission code package:
 
 ```bash
 make presubmission-check
