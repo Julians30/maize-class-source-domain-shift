@@ -1,6 +1,6 @@
 # Data availability during manuscript preparation
 
-This repository is currently private while the manuscript and supplementary material are being reconciled for submission.
+The source-code repository is public while the manuscript and supplementary material are being reconciled for submission. Public repository visibility does not imply that every large derived artifact listed in the integrity registries is independently downloadable.
 
 The planned deposit includes the frozen analytical manifests, protocol metadata, training-history summaries, per-image prediction/probability outputs where appropriate, perceptual-hash and SHA-256 audit artifacts, TOM2024 exclusion decisions, bootstrap/classwise statistical outputs, Grad-CAM reproducibility assets, and integrity manifests described by the manuscript.
 
