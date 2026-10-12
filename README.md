@@ -1,10 +1,16 @@
 # Maize Class–Source Confounding and Domain Shift Benchmark
 
-[![Repository audit](https://github.com/Julians30/maize-class-source-domain-shift/actions/workflows/repository-audit.yml/badge.svg?branch=main)](https://github.com/Julians30/maize-class-source-domain-shift/actions/workflows/repository-audit.yml) ![Python](https://img.shields.io/badge/Language-Python-3776AB?logo=python&logoColor=white)
+[![Repository audit](https://github.com/Julians30/maize-class-source-domain-shift/actions/workflows/repository-audit.yml/badge.svg?branch=main)](https://github.com/Julians30/maize-class-source-domain-shift/actions/workflows/repository-audit.yml) [![Code License: MIT](https://img.shields.io/badge/Code%20License-MIT-blue.svg)](LICENSE) ![Python](https://img.shields.io/badge/Language-Python-3776AB?logo=python&logoColor=white)
 
 Reproducibility repository for:
 
 **Class–Source Confounding and Architecture-Selection Instability under Domain Shift: A Multi-Source Benchmark for Maize Disease and Pest Image Classification**
+
+## License and data rights
+
+The project's original Python scripts, notebook code and software automation are available under the **[MIT License](LICENSE)**. The exact software-only licensing scope is explained in **[LICENSE_SCOPE.md](LICENSE_SCOPE.md)**.
+
+**MIT does not cover the maize image datasets, source-derived image assets, frozen analytical data, tables, or figures.** Original third-party images retain source-specific rights, and availability of large derived reproducibility assets is tracked separately. Consult [DATA_RIGHTS.md](DATA_RIGHTS.md) and [DATA_AVAILABILITY.md](DATA_AVAILABILITY.md). No external archive or repository DOI is claimed.
 
 ## Scientific objective
 
