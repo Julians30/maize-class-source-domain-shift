@@ -1,5 +1,7 @@
 # Maize Class–Source Confounding and Domain Shift Benchmark
 
+[![Repository audit](https://github.com/Julians30/maize-class-source-domain-shift/actions/workflows/repository-audit.yml/badge.svg?branch=main)](https://github.com/Julians30/maize-class-source-domain-shift/actions/workflows/repository-audit.yml) ![Python](https://img.shields.io/badge/Language-Python-3776AB?logo=python&logoColor=white)
+
 Reproducibility repository for:
 
 **Class–Source Confounding and Architecture-Selection Instability under Domain Shift: A Multi-Source Benchmark for Maize Disease and Pest Image Classification**
