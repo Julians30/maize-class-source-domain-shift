@@ -23,15 +23,15 @@ The scientific results are frozen. No model was retrained and no frozen result w
 
 ## Large-artifact policy
 
-Large release-safe prediction tables and manifests are **not required to be duplicated in GitHub during private pre-submission hardening**. Their exact release filenames, byte counts and SHA-256 values are controlled by repository manifests and mapped by `manifests/external_artifact_registry.csv`.
+Large release-safe prediction tables and manifests are **not all required to be duplicated in this public GitHub code/review repository**. Their exact release filenames, byte counts and SHA-256 values are controlled by repository manifests and mapped by `manifests/external_artifact_registry.csv`.
 
-They are planned for a persistent Zenodo archive at manuscript submission. Until such a deposit exists, the registry must say `PENDING_AT_SUBMISSION`; no DOI is fabricated.
+No external archive or DOI is claimed or required for the current GitHub code package. Until a particular large derived artifact is actually accessible at a verified public locator, its registry entry must remain `PENDING_AT_SUBMISSION`; do not fabricate release links or a DOI.
 
 The five main PDF figures have been re-located and their frozen hashes revalidated. Figure S6 has also been reconciled by exact SHA-256. Figure S7 remains rights-controlled because it contains image-bearing Grad-CAM material.
 
 ## Commands
 
-Current private pre-submission gate:
+Current public pre-submission gate:
 
 ```bash
 make presubmission-check
@@ -53,9 +53,9 @@ The final gate intentionally remains red until all final release requirements, p
 
 ## Remaining submission-time decisions
 
-- select/confirm the software licence;
+- [x] MIT software license published in `LICENSE`; see `LICENSE_SCOPE.md` for dataset/image exclusions;
 - confirm final author CRediT roles;
-- create the persistent archive and record its actual DOI/locator;
+- verify public download locations for any large derived artifacts claimed as available; do not require or invent an external archive or DOI;
 - finalize the rights decision for image-bearing Figure S7;
 - freeze the final repository-wide `manifests/release_sha256.csv`;
 - create the release tag only when the manuscript submission package is final.
