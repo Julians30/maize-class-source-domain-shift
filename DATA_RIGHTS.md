@@ -53,4 +53,4 @@ Subject to final privacy and rights review, the repository may release:
 
 ## Licensing
 
-No blanket data license is asserted for third-party image content. Any future code license or license for author-generated derived data must be scoped explicitly and must not be interpreted as relicensing third-party images. The verified CC BY 4.0 status of TOM2024 applies only to the corresponding source material and derivative uses that comply with its attribution terms.
+No blanket data license is asserted for third-party image content. The original research **software code and associated software documentation** in this repository are published under the [MIT License](LICENSE), subject to the specific exclusions and conditions in [LICENSE_SCOPE.md](LICENSE_SCOPE.md). That license does **not** cover third-party image content, frozen data/splits/manifests, predictions, figures, or other scientific output. Any license for author-generated derived data must be established separately. The verified CC BY 4.0 status of TOM2024 applies only to the corresponding source material and derivative uses that comply with its attribution terms.
