@@ -6,4 +6,4 @@ The planned deposit includes the frozen analytical manifests, protocol metadata,
 
 Original third-party images are handled separately from derived reproducibility assets. Their redistribution depends on the license and reuse terms of each source.
 
-A final public URL or persistent DOI should be inserted into the manuscript and supplementary material only after the release package has been audited and the repository visibility/release state has been intentionally changed.
+The public code repository is https://github.com/Julians30/maize-class-source-domain-shift. Only verified, actually accessible large-asset URLs should be described as public download locations in the manuscript or supplementary material. No external archive or repository DOI is claimed. Software licensing is separate from research data: see `LICENSE` (MIT for original code), `LICENSE_SCOPE.md` (specific exclusions), and `DATA_RIGHTS.md` (third-party image rights).
