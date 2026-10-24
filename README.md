@@ -1,10 +1,12 @@
 # Maize Class–Source Confounding and Domain Shift Benchmark
 
-[![Repository audit](https://github.com/Julians30/maize-class-source-domain-shift/actions/workflows/repository-audit.yml/badge.svg?branch=main)](https://github.com/Julians30/maize-class-source-domain-shift/actions/workflows/repository-audit.yml) [![Code License: MIT](https://img.shields.io/badge/Code%20License-MIT-blue.svg)](LICENSE) ![Python](https://img.shields.io/badge/Language-Python-3776AB?logo=python&logoColor=white)
+[![Repository audit](https://github.com/Julians30/maize-class-source-domain-shift/actions/workflows/repository-audit.yml/badge.svg?branch=main)](https://github.com/Julians30/maize-class-source-domain-shift/actions/workflows/repository-audit.yml) [![Code License: MIT](https://img.shields.io/badge/Code%20License-MIT-blue.svg)](LICENSE) ![Python](https://img.shields.io/badge/Language-Python-3776AB?logo=python&logoColor=white) ![Status](https://img.shields.io/badge/Status-Under%20review%20%C2%B7%20AgriEngineering-2E6DA4)
 
 Reproducibility repository for:
 
 **Class–Source Confounding and Architecture-Selection Instability under Domain Shift: A Multi-Source Benchmark for Maize Disease and Pest Image Classification**
+
+> **Editorial status (24 October 2026):** manuscript **under review** at **AgriEngineering (MDPI)**. It is not yet accepted or published; no journal DOI is claimed.
 
 ## License and data rights
 

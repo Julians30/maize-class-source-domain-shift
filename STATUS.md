@@ -2,7 +2,9 @@
 
 ## Current state
 
-**Public — pre-submission reproducibility package; large derived-asset release not yet complete.**
+**Public — manuscript under review at AgriEngineering (MDPI) (status as of 24 October 2026); large derived-asset release not yet complete.**
+
+Sections below that refer to “pre-submission” describe the repository-hardening stage and the names of the audit targets; they are kept for traceability.
 
 The scientific results are frozen. No model was retrained and no frozen result was regenerated during repository hardening.
 
