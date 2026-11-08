@@ -25,3 +25,7 @@ The original three-seed/18-run registry, exact blocked internal test and canonic
 5. Freeze the final release manifest/tag only after the scientific package and public locators are final.
 
 Use `make presubmission-check` for the historical repository checks. `make release-check` remains stricter and is not claimed to pass while the release requirements are incomplete. See `README.md`, `REPRODUCIBILITY.md`, `DATA_AVAILABILITY.md` and `DATA_RIGHTS.md`.
+
+## Draft-upload recovery
+
+`scripts/zenodo_draft_transfer.py` supplies recovery for an existing Colab upload session. It fetches the complete saved draft, checks the caller-specified ID and author list, accepts presentation-only title normalization, and can repair the same empty unpublished staging record with the prepared metadata. It resumes checksum-verified file transfer without creating another deposition, publishing, deleting, or storing credentials. The helper was checked with 16 local simulated-response tests; this does not establish that the actual transfer or public release has completed. Public archive and checkpoint download verification remain pending.
