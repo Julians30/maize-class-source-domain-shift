@@ -22,3 +22,7 @@ Original third-party images are not made reusable by the public visibility of th
 The public GitHub repository provides software and documentation for review and computational reproducibility. Some large derived analytical assets may remain pending or may be available only subject to separate review; neither the presence of a manifest nor this MIT license should be understood as a downloadable data release. See [DATA_RIGHTS.md](DATA_RIGHTS.md), [DATA_AVAILABILITY.md](DATA_AVAILABILITY.md), and [docs/EXTERNAL_ARTIFACTS.md](docs/EXTERNAL_ARTIFACTS.md).
 
 No external archive or DOI is claimed. Scientific citation of the corresponding article and sources is appreciated, but is not an additional condition imposed by the MIT software license.
+
+## Pretrained and fine-tuned model components
+
+Final fine-tuned checkpoints inherit applicable upstream component terms; the repository MIT license and the proposed CC BY 4.0 scope for original derived data are not blanket replacements for pretrained-model licenses. See [PRETRAINED_MODEL_NOTICES.md](PRETRAINED_MODEL_NOTICES.md) for the six release-resolved initialization identifiers and source model cards. MobileViT points to CVNets terms, ViT's model card identifies Apache-2.0, and Swin's identifies MIT. Torchvision pretrained assets require their applicable model/data terms. These notices add attribution and clarify scope; they do not claim independently logged original initialization hashes, completed clearance of every asset, or a public model deposit.
