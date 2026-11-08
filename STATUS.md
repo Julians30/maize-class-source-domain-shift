@@ -1,63 +1,27 @@
-# Repository status
+# Repository status — 8 November 2026
 
-## Current state
+**Public repository; manuscript under review at AgriEngineering; current persistent research-data release pending.** No acceptance or DOI is claimed.
 
-**Public — manuscript under review at AgriEngineering (MDPI) (status as of 24 October 2026); large derived-asset release not yet complete.**
+## Current revision
 
-Sections below that refer to “pre-submission” describe the repository-hardening stage and the names of the audit targets; they are kept for traceability.
+- Six evaluated configurations, five seeds (17/42/73/101/137), 30 selected checkpoints and 120 principal evaluations.
+- Architecture selection by mean internal validation macro-F1; additional seeds and optimization checks are retrospective.
+- Three external cohorts, two broad provenance families, different target class sets and metrics.
+- Native comparisons completed for 1,164 strong candidate pairs, including 190 critical cross-partition pairs.
+- Four exact critical RGB matches; 182 further assistant-supported pairs. The four previously unresolved pairs now have recorded human judgments (three same-photograph transformations, one related capture); the remaining 186 critical pairs await human ratification.
+- Conservative exclusion sensitivities preserve the internal architecture orderings; they do not reconstruct clean training or checkpoint selection.
+- Thirty checkpoint hashes verified; approximately 9 GB still require deposit and public-download verification.
 
-The scientific results are frozen. No model was retrained and no frozen result was regenerated during repository hardening.
+## Historical repository layer
 
-## Pre-submission code status
+The original three-seed/18-run registry, exact blocked internal test and canonical analysis modules remain unchanged as historical evidence. Repository CI audits this preserved layer. Passing those checks does not establish that the five-seed candidate or checkpoint binaries have been publicly released. The final repository-wide `manifests/release_sha256.csv` has not been frozen.
 
-- 2 canonical release-safe manuscript notebooks are versioned.
-- Canonical internal comparison and final paired-inference source are SHA-256 audited.
-- 10 provenance modules cover protocol/splits, dataloaders, E2 training/evaluation, 18-checkpoint evaluation, consolidated E2-A analysis, class–source shortcut control, PlantVillage, TOM2024, classwise uncertainty, Grad-CAM and computational time.
-- Repository CI verifies canonical code, provenance code, core claims, exact blocked randomization, ranking stability, supplementary reconciliation and external-layer controlling manifests.
+## Remaining work
 
-## Frozen scientific core
+1. Complete or explicitly delimit human ratification of critical pairs; preserve names/dates privately and resolve disagreements without silently overwriting votes.
+2. Deposit the current scientific archive and 30 models, review rights/metadata, publish and verify real DOI/download links. Existing `PENDING_AT_SUBMISSION` entries remain accurate until then.
+3. Verify or explicitly justify unresolved upstream terms for 5,605 internal CIMMYT/Kaggle-derived images and the historical PlantVillage mirror chain.
+4. Keep incomplete experiments explicit: confirmed-parent recovery/bootstrap, full closed-set/remapping analyses, and a clean training/selection reconstruction were not performed. The healthy-source prediction check is not a training ablation.
+5. Freeze the final release manifest/tag only after the scientific package and public locators are final.
 
-- master corpus: 13,413 images / 13,407 similarity groups;
-- 6 architectures × 3 seeds = 18 frozen runs;
-- principal internal E2-A test: 1,719 images;
-- external manuscript domains: Pandian2019, filtered PlantVillage and TOM2024;
-- exact blocked internal macro-F1 test: 518,400 distinct assignments, `p_exact = 0.52109375`.
-
-## Large-artifact policy
-
-Large release-safe prediction tables and manifests are **not all required to be duplicated in this public GitHub code/review repository**. Their exact release filenames, byte counts and SHA-256 values are controlled by repository manifests and mapped by `manifests/external_artifact_registry.csv`.
-
-No external archive or DOI is claimed or required for the current GitHub code package. Until a particular large derived artifact is actually accessible at a verified public locator, its registry entry must remain `PENDING_AT_SUBMISSION`; do not fabricate release links or a DOI.
-
-The five main PDF figures have been re-located and their frozen hashes revalidated. Figure S6 has also been reconciled by exact SHA-256. Figure S7 remains rights-controlled because it contains image-bearing Grad-CAM material.
-
-## Commands
-
-Current public pre-submission gate:
-
-```bash
-make presubmission-check
-```
-
-Normal development validation:
-
-```bash
-make verify
-```
-
-Final public-release gate, reserved for submission time:
-
-```bash
-make release-check
-```
-
-The final gate intentionally remains red until all final release requirements, public archive locators and rights decisions are satisfied.
-
-## Remaining submission-time decisions
-
-- [x] MIT software license published in `LICENSE`; see `LICENSE_SCOPE.md` for dataset/image exclusions;
-- confirm final author CRediT roles;
-- verify public download locations for any large derived artifacts claimed as available; do not require or invent an external archive or DOI;
-- finalize the rights decision for image-bearing Figure S7;
-- freeze the final repository-wide `manifests/release_sha256.csv`;
-- create the release tag only when the manuscript submission package is final.
+Use `make presubmission-check` for the historical repository checks. `make release-check` remains stricter and is not claimed to pass while the release requirements are incomplete. See `README.md`, `REPRODUCIBILITY.md`, `DATA_AVAILABILITY.md` and `DATA_RIGHTS.md`.
