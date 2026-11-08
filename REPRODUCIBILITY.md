@@ -9,7 +9,7 @@ Updated 8 November 2026. The current manuscript/supplement define reporting targ
 - Three external cohorts (Pandian2019, filtered PlantVillage, TOM2024) represent two broad provenance families and different tasks/metrics.
 - Paired group/seed bootstrap with 5,000 resamples, raw and Holm-adjusted contrasts, classwise errors and seed-specific ranks. Uncertainty is conditional on the observed five seeds and recorded groups.
 - Native-pixel verification of 1,164 strong pairs; prediction-only internal exclusions and external candidate-family weighting. Neither reconstructs clean training/selection or supplies confirmed-parent bootstrap intervals.
-- Human review currently covers four of 190 critical pairs (three same-photograph transformations, one related capture), leaving 186 pending. The anonymous 94-image rust assessment is separate.
+- Human review covers all 190 critical pairs (189 same-photograph or transformation judgments, one related capture), with none pending. Two contributors reviewed disjoint subsets of 171 and 19, so no independent double rating of every pair or inter-rater agreement is claimed. The four computationally exact critical pairs are included in the 189 visual same-photograph judgments. The other 974 strong candidates were not visually adjudicated. The anonymous 94-image rust assessment is separate.
 
 ## Prepared scientific package
 
