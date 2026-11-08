@@ -7,7 +7,7 @@ This public repository provides code, integrity registries and documentation. It
 - Source/evaluation manifests, 30 run records, five-seed image-level predictions and recovered validation predictions.
 - Principal statistical summaries, native-pixel pair results, exclusion masks and reproducible prediction-only sensitivity code.
 - Anonymous 94-image rust assessments, source-stratified healthy checks and TOM2024 probability summaries.
-- A current coded human-review record covering four of 190 critical pairs; 186 remain pending. Private names, free-text notes, correspondence and image-review galleries are excluded from the scientific archive.
+- A completed coded human-review record covering all 190 critical pairs: 189 same-photograph or transformation judgments and one related capture; none pending. Two contributors reviewed disjoint subsets, without independent double rating of each pair. Private names, free-text notes, correspondence and image-review galleries are excluded from the scientific archive.
 - Thirty separate checkpoint files, totaling 9,013,090,475 bytes, verified against their recorded SHA-256 values. These are not inside the data/code ZIP and are not yet verified public downloads.
 
 The candidate reflects six configurations and five seeds (17/42/73/101/137). The repository's original three-seed/18-run registries remain identifiable historical records. Entries in `manifests/external_artifact_registry.csv` still marked `PENDING_AT_SUBMISSION` must not be represented as accessible URLs or replaced with an invented DOI.
@@ -20,4 +20,4 @@ The proposed license for original derived data/documentation is CC BY 4.0; origi
 
 ## Closing public availability
 
-Upload the scientific archive and checkpoint files to a persistent draft, incorporate the completed or explicitly partial human-review record, review metadata and rights, publish, and verify the DOI and actual public downloads. Only then update the artifact registry, manuscript availability statement and reviewer response with real locators. A private working package or reserved DOI does not complete this step.
+Upload the scientific archive and checkpoint files to a persistent draft, incorporate the completed critical-pair human-review record, review metadata and rights, publish, and verify the DOI and actual public downloads. Only then update the artifact registry, manuscript availability statement and reviewer response with real locators. A private working package or reserved DOI does not complete this step.
