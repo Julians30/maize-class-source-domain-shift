@@ -1,9 +1,23 @@
-# Data availability during manuscript preparation
+# Data availability — revision of 8 November 2026
 
-The source-code repository is public while the manuscript and supplementary material are being reconciled for submission. Public repository visibility does not imply that every large derived artifact listed in the integrity registries is independently downloadable.
+This public repository provides code, integrity registries and documentation. It does not yet provide a verified persistent public release of all current five-seed research artifacts. No Zenodo record, archive DOI or journal DOI is claimed.
 
-The planned deposit includes the frozen analytical manifests, protocol metadata, training-history summaries, per-image prediction/probability outputs where appropriate, perceptual-hash and SHA-256 audit artifacts, TOM2024 exclusion decisions, bootstrap/classwise statistical outputs, Grad-CAM reproducibility assets, and integrity manifests described by the manuscript.
+## Prepared for deposit, not yet publicly released
 
-Original third-party images are handled separately from derived reproducibility assets. Their redistribution depends on the license and reuse terms of each source.
+- Source/evaluation manifests, 30 run records, five-seed image-level predictions and recovered validation predictions.
+- Principal statistical summaries, native-pixel pair results, exclusion masks and reproducible prediction-only sensitivity code.
+- Anonymous 94-image rust assessments, source-stratified healthy checks and TOM2024 probability summaries.
+- A current coded human-review record covering four of 190 critical pairs; 186 remain pending. Private names, free-text notes, correspondence and image-review galleries are excluded from the scientific archive.
+- Thirty separate checkpoint files, totaling 9,013,090,475 bytes, verified against their recorded SHA-256 values. These are not inside the data/code ZIP and are not yet verified public downloads.
 
-The public code repository is https://github.com/Julians30/maize-class-source-domain-shift. Only verified, actually accessible large-asset URLs should be described as public download locations in the manuscript or supplementary material. No external archive or repository DOI is claimed. Software licensing is separate from research data: see `LICENSE` (MIT for original code), `LICENSE_SCOPE.md` (specific exclusions), and `DATA_RIGHTS.md` (third-party image rights).
+The candidate reflects six configurations and five seeds (17/42/73/101/137). The repository's original three-seed/18-run registries remain identifiable historical records. Entries in `manifests/external_artifact_registry.csv` still marked `PENDING_AT_SUBMISSION` must not be represented as accessible URLs or replaced with an invented DOI.
+
+## Scope and rights
+
+Original third-party photograph collections are excluded from the prepared archive. Exact upstream records/terms for 5,605 internal CIMMYT/Kaggle-derived images and the historical PlantVillage mirror chain are not fully verified. Scientific filenames, hashes and derived outputs do not grant image redistribution rights. See `manifests/source_license_audit.csv`, `DATA_RIGHTS.md`, `LICENSE_SCOPE.md` and `LICENSE`.
+
+The proposed license for original derived data/documentation is CC BY 4.0; original software remains MIT. Upstream assets and pretrained-weight/checkpoint conditions require their applicable terms. The archive's final licensing and authorship metadata must be checked before publication.
+
+## Closing public availability
+
+Upload the scientific archive and checkpoint files to a persistent draft, incorporate the completed or explicitly partial human-review record, review metadata and rights, publish, and verify the DOI and actual public downloads. Only then update the artifact registry, manuscript availability statement and reviewer response with real locators. A private working package or reserved DOI does not complete this step.
