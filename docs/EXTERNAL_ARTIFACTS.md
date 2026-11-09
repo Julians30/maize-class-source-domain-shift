@@ -1,5 +1,13 @@
 # External artifact policy
 
+## Current public release on 9 November 2026 UTC
+
+The five-seed revision is published at https://doi.org/10.5281/zenodo.24064539. Its authoritative inventory is `manifests/zenodo_24064539_files.csv`, with ZIP-member hashes in `manifests/zenodo_24064539_archive_members.csv`; see `docs/CURRENT_PUBLIC_RELEASE.md` for verification scope. The current archive supplies recovered manifests, image-level prediction labels, validation outputs, analysis code and 30 separate checkpoints. Complete historical nine-output probability vectors are not claimed.
+
+The original text below records the earlier three-seed/export preparation and recovery state. Its pending flags, unrecovered-source statements and proposed future deposit describe that historical stage. The current recovered master is `core_v7/manifests/manifest_master_clean_snapshot_v1_pre_split.csv` inside the public ZIP. No byte equivalence with historical expected exports is claimed; all six old registry layers remain historical. Original source images and private reviewer correspondence are not included in the public archive.
+
+## Historical preparation record
+
 ## Purpose
 
 This repository separates the **reviewer-facing analytical code** from large derived artifacts. All code, canonical notebooks, statistical summaries, integrity manifests and verification scripts are versioned in GitHub. Large derived manifests and image-level prediction tables are tracked by SHA-256 records. Publication or download availability for each artifact must be confirmed independently. No external archival deposit or DOI is claimed.
