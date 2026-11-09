@@ -1,23 +1,23 @@
-# Data availability — revision of 8 November 2026
+# Data availability
 
-This public repository provides code, integrity registries and documentation. It does not yet provide a verified persistent public release of all current five-seed research artifacts. A private Zenodo draft contains all 31 uploaded and remotely verified files. Its metadata edits and DOI reservation have been verified, but the record remains unpublished; no registered archive DOI, published release or journal DOI is claimed.
+Updated 9 November 2026 (UTC).
 
-## Verified private draft, not yet publicly released
+Public research record: [https://doi.org/10.5281/zenodo.24064539](https://doi.org/10.5281/zenodo.24064539). It contains the data/code ZIP and all 30 selected checkpoints (31 files; 9,036,167,461 bytes). See [current file registry](manifests/zenodo_24064539_files.csv), [archive-member inventory](manifests/zenodo_24064539_archive_members.csv) and [verification scope](docs/CURRENT_PUBLIC_RELEASE.md).
 
-- Source/evaluation manifests, 30 run records, five-seed image-level predictions and recovered validation predictions.
-- Principal statistical summaries, native-pixel pair results, exclusion masks and reproducible prediction-only sensitivity code.
-- Anonymous 94-image rust assessments, source-stratified healthy checks and TOM2024 probability summaries.
-- A completed coded human-review record covering all 190 critical pairs: 189 same-photograph or transformation judgments and one related capture; none pending. Two contributors reviewed disjoint subsets, without independent double rating of each pair. Private names, free-text notes, correspondence and image-review galleries are excluded from the scientific archive.
-- Thirty separate checkpoint files, totaling 9,013,090,475 bytes, verified against their recorded SHA-256 values. These are not inside the data/code ZIP and are not yet verified public downloads.
+## Contents
 
-The candidate reflects six configurations and five seeds (17/42/73/101/137). The repository's original three-seed/18-run registries remain identifiable historical records. Entries in `manifests/external_artifact_registry.csv` still marked `PENDING_AT_SUBMISSION` must not be represented as accessible URLs or replaced with an invented DOI.
+The archive supplies recovered master and split/evaluation manifests, five-seed image-level prediction labels, recovered validation predictions, 30 run manifests, principal statistics, source-control reconstruction, anonymous rust assessments, native-pixel audit results, exclusion masks, sensitivity code and coded judgments for all 190 critical pairs. Checkpoint filenames, byte sizes and full-file SHA-256 values are in CHECKPOINT_FILES.csv inside the ZIP and the current public file registry.
 
-## Scope and rights
+The complete public ZIP was downloaded and its SHA-256/MD5 matched the checksum-verified upload. Each checkpoint passed an unauthenticated 32-byte download check; the public sizes and MD5 values matched the verified upload records. The checkpoint binaries were not downloaded in full again. DOI resolution and DataCite registration were verified. See docs/ZENODO_PUBLIC_VERIFICATION.json for the recorded checks.
 
-Original third-party photograph collections are excluded from the prepared archive. Exact upstream records/terms for 5,605 internal CIMMYT/Kaggle-derived images and the historical PlantVillage mirror chain are not fully verified. Scientific filenames, hashes and derived outputs do not grant image redistribution rights. See `manifests/source_license_audit.csv`, `DATA_RIGHTS.md`, `LICENSE_SCOPE.md` and `LICENSE`.
+## Historical exports and scope
 
-The proposed license for original derived data/documentation is CC BY 4.0; original software remains MIT. Upstream assets and pretrained-weight/checkpoint conditions require their applicable terms. The draft now declares the component-specific license scope and retains the four prepared authors. These declarations do not independently resolve the outstanding upstream rights questions.
+The original six-layer manifests/external_artifact_registry.csv describes earlier expected exports, including three-seed probability tables and historical figures. Its pending flags are retained as historical evidence; they are not the availability status of the published five-seed record. A hash comparison found no byte-identical matches between those 70 expected export files and the members of the current archive. Current files therefore have their own filenames and hashes, with no claim of byte equivalence. Complete historical nine-output probability vectors are not supplied by the current label tables.
 
-## Closing public availability
+The filename CANDIDATO and preparation README within the ZIP are historical preparation labels. The Zenodo record is published; those labels do not indicate a private draft. Original source photographs, private review identities/notes, image galleries and editorial correspondence are excluded.
 
-The scientific archive, completed critical-pair review and 30 checkpoints are in the verified private draft. Complete the prepublication rights/content review, publish, and verify DOI registration and actual public downloads. Only then update the artifact registry, manuscript availability statement and reviewer response with real locators. A private working package or reserved DOI does not complete this step.
+## Rights and scientific limits
+
+Original derived data/documentation use CC BY 4.0. Original software and third-party pretrained/fine-tuned model components retain applicable terms; see LICENSE_SCOPE.md and PRETRAINED_MODEL_NOTICES.md. Public access does not clear unresolved exact upstream terms for 5,605 internal CIMMYT/Kaggle-derived images or the historical PlantVillage mirror chain.
+
+The 190 critical pairs have completed human judgments, but the other 974 strong candidates were not visually adjudicated. Biological parents remain unconfirmed. Prediction-only exclusions do not reconstruct clean training or selection. Added seeds and optimization checks were retrospective. The archive does not supply the unperformed analyses listed in REPRODUCIBILITY.md.
