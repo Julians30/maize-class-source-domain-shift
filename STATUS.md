@@ -1,6 +1,6 @@
-# Repository status — 8 November 2026
+# Repository status — 9 November 2026 (UTC)
 
-**Public repository; manuscript under review at AgriEngineering; current persistent research-data release pending.** No acceptance or registered archive DOI is claimed.
+**Public repository and published research-data record; manuscript under review at AgriEngineering.** DOI: https://doi.org/10.5281/zenodo.24064539. No editorial acceptance is claimed.
 
 ## Current revision
 
@@ -10,7 +10,7 @@
 - Native comparisons completed for 1,164 strong candidate pairs, including 190 critical cross-partition pairs.
 - Four exact critical RGB matches; 182 further assistant-supported pairs. The completed human record covers all 190 critical pairs: 189 same-photograph or transformation judgments and one related capture, none pending. Two contributors reviewed disjoint subsets (171 and 19); no independent double rating or agreement statistic is claimed. The four exact pairs are a subset of the 189 visual same-photograph judgments. The other 974 strong candidates were not visually adjudicated.
 - Conservative exclusion sensitivities preserve the internal architecture orderings; they do not reconstruct clean training or checkpoint selection.
-- Thirty checkpoint hashes verified. The data/code archive and all 30 checkpoints (31 files, approximately 9.04 GB) have been uploaded and checksum-verified in a private Zenodo draft. The description and component license declarations have been updated and read back successfully; a DOI is reserved. Publication, DOI registration and public-download verification remain pending.
+- Thirty checkpoint hashes verified. The data/code archive and all 30 checkpoints are published in Zenodo (31 files, 9,036,167,461 bytes). DOI resolution, DataCite registration and unauthenticated file access were verified. The complete public ZIP hash matched; checkpoint checks used public sizes/MD5 and 32-byte downloads, without downloading all model binaries in full again.
 
 ## Historical repository layer
 
@@ -19,7 +19,7 @@ The original three-seed/18-run registry, exact blocked internal test and canonic
 ## Remaining work
 
 1. Preserve the completed 190-pair critical-review record and private names/dates. Keep the remaining 974 noncritical strong candidates and biological-parent limits explicit; do not represent disjoint subsets as independent double assessment.
-2. Review metadata and rights in the verified 31-file private draft, publish and verify the real DOI and public-download links. Existing `PENDING_AT_SUBMISSION` entries remain accurate until then.
+2. Preserve the verified public-release record and current file/member registries. The old six-layer `PENDING_AT_SUBMISSION` registry describes historical exports; those bytes are not claimed to be the current five-seed payload.
 3. Verify or explicitly justify unresolved upstream terms for 5,605 internal CIMMYT/Kaggle-derived images and the historical PlantVillage mirror chain.
 4. Keep incomplete experiments explicit: confirmed-parent recovery/bootstrap, full closed-set/remapping analyses, and a clean training/selection reconstruction were not performed. The healthy-source prediction check is not a training ablation.
 5. Freeze the final release manifest/tag only after the scientific package and public locators are final.
@@ -28,8 +28,8 @@ Use `make presubmission-check` for the historical repository checks. `make relea
 
 ## Draft-upload recovery
 
-`scripts/zenodo_draft_transfer.py` supplies recovery for an existing Colab upload session. It fetches the complete saved draft, checks the caller-specified ID and author list, accepts presentation-only title normalization, and can repair the same empty unpublished staging record with the prepared metadata. It resumes checksum-verified file transfer without creating another deposition, publishing, deleting, or storing credentials. The recovery helper passed 16 local simulated-response tests. The subsequent actual transfer completed and verified all 31 files in the private draft; this is separate evidence from the tests and does not establish public availability. Public archive and checkpoint download verification remain pending.
+`scripts/zenodo_draft_transfer.py` supplies recovery for an existing Colab upload session. It fetches the complete saved draft, checks the caller-specified ID and author list, accepts presentation-only title normalization, and can repair the same empty unpublished staging record with the prepared metadata. It resumes checksum-verified file transfer without creating another deposition, publishing, deleting, or storing credentials. The recovery helper passed 16 local simulated-response tests. The subsequent actual transfer completed and verified all 31 files in the draft. The record was later published and independently checked through unauthenticated public endpoints; see docs/CURRENT_PUBLIC_RELEASE.md. These are separate observations from the simulated tests.
 
 ## Draft metadata preparation
 
-`scripts/zenodo_metadata.py` prepares readable descriptions, DOI reservation and explicit component license scope using the existing unpublished draft. It preserves authors and verified files, keeps a before/after metadata audit, and contains no publication, deletion or file-upload action. After correcting content negotiation and the numeric If-Match header, its guards and idempotence passed 18 local simulated-response tests. A subsequent actual execution updated and read back the draft metadata, retained all 31 verified files, and confirmed a reserved DOI. The draft is still unpublished. Component license declarations do not establish independent clearance of all third-party assets.
+`scripts/zenodo_metadata.py` prepares readable descriptions, DOI reservation and explicit component license scope using the existing unpublished draft. It preserves authors and verified files, keeps a before/after metadata audit, and contains no publication, deletion or file-upload action. After correcting content negotiation and the numeric If-Match header, its guards and idempotence passed 18 local simulated-response tests. A subsequent actual execution updated and read back the draft metadata, retained all 31 verified files, and confirmed a reserved DOI. The user subsequently published the record; its current public status and DOI are verified. Component license declarations do not establish independent clearance of all third-party assets.
