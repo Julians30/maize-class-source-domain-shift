@@ -34,7 +34,10 @@ class Session:
             assert method=='POST';self.record['pids']={'doi':{'identifier':'10.5072/test.123','provider':'datacite'}};return Reply(self.record)
         if '/deposit/' in url:return Reply(self.files if url.endswith('/files') else self.legacy)
         if method=='PUT':
-            assert kwargs['headers'].get('If-Match')=='"7"'
+            # Real Invenio request schema declares if_match as fields.Int().
+            # A quoted response ETag must not be echoed verbatim in the request.
+            assert int(kwargs['headers']['If-Match'])==7
+            assert kwargs['headers']['If-Match']=='7'
             self.record.update(copy.deepcopy(kwargs['json']))
         return Reply(self.record)
     def close(self):self.closed=True
@@ -77,6 +80,18 @@ class Tests(unittest.TestCase):
         self.session.record['metadata'].pop('rights')
         with self.assertRaises(m.MetadataEditError):self.run_editor()
         self.assertTrue(all(method=='GET' for method,url,kwargs in self.session.calls))
+    def test_if_match_uses_unquoted_numeric_revision(self):
+        self.assertEqual(m._revision_header({'revision_id':7},'"7"'),{'If-Match':'7'})
+        self.assertEqual(m._revision_header({},'"7"'),{'If-Match':'7'})
+        self.assertEqual(m._revision_header({},'W/"7"'),{'If-Match':'7'})
+        self.assertEqual(m._revision_header({'revision_id':0},None),{'If-Match':'0'})
+        with self.assertRaises(ValueError):int('"7"')
+        self.run_editor()
+        put=[kwargs for method,url,kwargs in self.session.calls if method=='PUT']
+        self.assertEqual(put[0]['headers']['If-Match'],'7')
+    def test_missing_or_conflicting_revision_stops(self):
+        for record,etag in [({},None),({'revision_id':8},'"7"'),({},'not-a-revision'),({'revision_id':True},None)]:
+            with self.assertRaises(m.MetadataEditError):m._revision_header(record,etag)
     def test_second_run_no_duplicate_doi_or_headings(self):
         self.run_editor();first=self.session.record['metadata']['description'];self.session.closed=False;self.run_editor()
         self.assertEqual(first,self.session.record['metadata']['description']);self.assertEqual(sum(method=='POST' for method,url,kw in self.session.calls),1);self.assertEqual(len(json.loads((self.path.parent/'metadata_editor_123.json').read_text())['events']),2)
