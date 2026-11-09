@@ -20,7 +20,7 @@ The original three-seed/18-run registry, exact blocked internal test and canonic
 
 1. Preserve the completed 190-pair critical-review record and private names/dates. Keep the remaining 974 noncritical strong candidates and biological-parent limits explicit; do not represent disjoint subsets as independent double assessment.
 2. Preserve the verified public-release record and current file/member registries. The old six-layer `PENDING_AT_SUBMISSION` registry describes historical exports; those bytes are not claimed to be the current five-seed payload.
-3. Verify or explicitly justify unresolved upstream terms for 5,605 internal CIMMYT/Kaggle-derived images and the historical PlantVillage mirror chain.
+3. Retain the newly verified traceability of all 5,605 CIMMYT/Kaggle-labeled records and the recovered PlantVillage source (3,852 public binary hash matches). The current PlantVillage dataset card declares CC BY-SA 3.0. Keep the narrower unresolved upstream component terms and collecting-institution/acquisition attribution for the CIMMYT/Kaggle records explicit; see docs/SOURCE_TRACEABILITY.md.
 4. Keep incomplete experiments explicit: confirmed-parent recovery/bootstrap, full closed-set/remapping analyses, and a clean training/selection reconstruction were not performed. The healthy-source prediction check is not a training ablation.
 5. Freeze the final release manifest/tag only after the scientific package and public locators are final.
 
@@ -33,3 +33,7 @@ Use `make presubmission-check` for the historical repository checks. `make relea
 ## Draft metadata preparation
 
 `scripts/zenodo_metadata.py` prepares readable descriptions, DOI reservation and explicit component license scope using the existing unpublished draft. It preserves authors and verified files, keeps a before/after metadata audit, and contains no publication, deletion or file-upload action. After correcting content negotiation and the numeric If-Match header, its guards and idempotence passed 18 local simulated-response tests. A subsequent actual execution updated and read back the draft metadata, retained all 31 verified files, and confirmed a reserved DOI. The user subsequently published the record; its current public status and DOI are verified. Component license declarations do not establish independent clearance of all third-party assets.
+
+## Source evidence strengthened on 9 November 2026 UTC
+
+All 5,605 component records reconcile across the published master, E2-A manifest and archived-extraction crosswalk, with complete filename, SHA-256, pHash, group and partition fields. Their roles are 3,923 train, 842 validation and 840 test. The original PlantVillage notebook records the clone URL and completed download; fresh public binaries match all 3,852 source hashes and support the 1,498 evaluation-file mapping and 360 healthy correspondences. No model training, inference or metric recalculation was performed. This evidence narrows the attribution limitation and corrects the earlier description of an unreconstructed PlantVillage mirror chain.
