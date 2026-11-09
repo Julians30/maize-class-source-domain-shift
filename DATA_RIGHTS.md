@@ -14,7 +14,7 @@ Reference-level provenance recorded by the manuscript includes:
 
 - Adege (2026), *Maize Crop Disease (Leaf)*, Mendeley Data, V1, DOI: `10.17632/6w6gsvghfw.1`;
 - Arun Pandian & Geetharamani (2019), plant-leaf-disease data, Mendeley Data, V1, DOI: `10.17632/tywbtsjrjv.1`;
-- PlantVillage as described by Mohanty et al. (2016), used only after an overlap audit and restricted to two retained maize disease classes;
+- PlantVillage as described by Mohanty et al. (2016), downloaded from https://github.com/spMohanty/PlantVillage-Dataset as documented in the original notebook; the current upstream dataset card declares CC BY-SA 3.0. All 3,852 archived maize-source hashes match public commit 7f7ecc7e1eaca78107e3affe7cb5abd9427e139a; the 1,498-image evaluation subset remains limited to blight/leaf spot after the recorded overlap audit;
 - TOM2024 as described by Appiah et al. (2025), *Data in Brief* 59, 111357, DOI: `10.1016/j.dib.2025.111357`, with the underlying Mendeley Data record DOI `10.17632/3d4yg89rtr.1`;
 - additional operational components preserved in the local audit, including CIMMYT-derived and Kaggle-derived components, for which redistribution rights must be reviewed independently.
 
@@ -54,3 +54,11 @@ Subject to final privacy and rights review, the repository may release:
 ## Licensing
 
 No blanket data license is asserted for third-party image content. The original research **software code and associated software documentation** in this repository are published under the [MIT License](LICENSE), subject to the specific exclusions and conditions in [LICENSE_SCOPE.md](LICENSE_SCOPE.md). That license does **not** cover third-party image content, frozen data/splits/manifests, predictions, figures, or other scientific output. Any license for author-generated derived data must be established separately. The verified CC BY 4.0 status of TOM2024 applies only to the corresponding source material and derivative uses that comply with its attribution terms.
+
+## Verified image traceability on 9 November 2026 UTC
+
+The 5,605 CIMMYT/Kaggle-labeled images are not missing observations. All have complete local identity metadata and exact-content correspondence to the archived extraction; their experimental partition roles are 3,923 training, 842 validation and 840 test. The public Zenodo record contains the controlling manifests and extraction-membership crosswalk. See docs/SOURCE_TRACEABILITY.md, manifests/traceability_5605_summary.csv and docs/SOURCE_TRACEABILITY_VERIFICATION.json.
+
+The original PlantVillage notebook contains the exact public clone URL and its completed output. A fresh comparison verified all 3,852 source-image hashes, all 1,498 evaluation images through their relative-path/source-hash mapping, and the 360 healthy correspondences. The current public dataset card declares CC BY-SA 3.0. That source attribution/license is distinct from the study authors' CC BY 4.0 scope for original derived data and does not grant a blanket license to other upstream image collections. No original photographs were added to the study archive during this verification.
+
+The remaining limitation is the exact upstream component/mirror terms and collecting-institution/acquisition attribution for the historical CIMMYT/Kaggle components. A filename-derived label is not proof of collecting institution or country. The full local image and split traceability should not be described as absent merely because these upstream fields remain unresolved.
