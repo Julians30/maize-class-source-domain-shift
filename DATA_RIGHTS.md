@@ -16,7 +16,7 @@ Reference-level provenance recorded by the manuscript includes:
 - Arun Pandian & Geetharamani (2019), plant-leaf-disease data, Mendeley Data, V1, DOI: `10.17632/tywbtsjrjv.1`;
 - PlantVillage as described by Mohanty et al. (2016), downloaded from https://github.com/spMohanty/PlantVillage-Dataset as documented in the original notebook; the current upstream dataset card declares CC BY-SA 3.0. All 3,852 archived maize-source hashes match public commit 7f7ecc7e1eaca78107e3affe7cb5abd9427e139a; the 1,498-image evaluation subset remains limited to blight/leaf spot after the recorded overlap audit;
 - TOM2024 as described by Appiah et al. (2025), *Data in Brief* 59, 111357, DOI: `10.1016/j.dib.2025.111357`, with the underlying Mendeley Data record DOI `10.17632/3d4yg89rtr.1`;
-- additional operational components preserved in the local audit, including CIMMYT-derived and Kaggle-derived components, for which redistribution rights must be reviewed independently.
+- the operational components `CIMMYT_MLND`, `Kaggle_HEALTHY_up` and `Kaggle_Healthy_paren`, which are filename-pattern labels for images obtained within the Adege (2026) download above (CC BY 4.0 as declared by that aggregated collection); the record does not report their original contributors, so raw redistribution remains excluded.
 
 These references document provenance at the level supported by the manuscript. They do **not** constitute a repository-wide licensing determination.
 
