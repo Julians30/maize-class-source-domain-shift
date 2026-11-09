@@ -137,12 +137,30 @@ def _call(session, method, url, **kwargs):
     )
     if not legal:
         raise MetadataEditError('Solicitud bloqueada: esta celda solo edita metadatos de un borrador existente.')
+    headers = dict(kwargs.pop('headers', {}) or {})
+    # Zenodo overrides application/json with its legacy output serializer even
+    # on modern /records routes. Explicit content negotiation is required to
+    # receive metadata.rights, native creators and pids without losing fields.
+    headers['Accept'] = ('application/vnd.inveniordm.v1+json'
+                         if route.startswith('/api/records/') else 'application/json')
+    if method == 'PUT':
+        headers.setdefault('Content-Type', 'application/json')
     try:
-        response = session.request(method, url, allow_redirects=False, timeout=(30,120), **kwargs)
+        response = session.request(method, url, allow_redirects=False, timeout=(30,120), headers=headers, **kwargs)
     except Exception:
         raise MetadataEditError('La conexión se interrumpió. No se creó ni publicó otro depósito; conserva el estado y vuelve a comprobarlo.') from None
     if response.status_code not in {200,201,202}:
-        raise MetadataEditError(f'Zenodo respondió HTTP {response.status_code} durante la edición. No se imprimieron credenciales ni se publicaron archivos.')
+        fields = []
+        try:
+            errors = response.json().get('errors', [])
+            if isinstance(errors, list):
+                fields = [row.get('field') for row in errors if isinstance(row, dict)
+                          and isinstance(row.get('field'), str)
+                          and re.fullmatch(r'[A-Za-z0-9_.\[\]-]{1,160}', row['field'])]
+        except Exception:
+            pass
+        detail = (' Campos señalados por la API: ' + ', '.join(fields[:8]) + '.') if fields else ''
+        raise MetadataEditError(f'Zenodo respondió HTTP {response.status_code} durante la edición.' + detail + ' No se imprimieron credenciales ni se publicaron archivos.')
     try:
         return response.json(), response.headers.get('ETag')
     except Exception:
