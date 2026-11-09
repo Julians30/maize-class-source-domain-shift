@@ -1,0 +1,22 @@
+{
+  "public_repository": "https://github.com/spMohanty/PlantVillage-Dataset",
+  "public_repository_commit_checked": "7f7ecc7e1eaca78107e3affe7cb5abd9427e139a",
+  "original_download_commit_recorded": false,
+  "original_notebook_sha256": "5a128327b43c8a4a5d3b468644c5bd56b4289dd36697fde6a071633f1fb7559a",
+  "original_download_cell_index": 3,
+  "original_download_output_present": true,
+  "public_maize_files": 3852,
+  "archived_source_records": 3852,
+  "archived_source_sha256_matches": 3852,
+  "evaluation_records": 1498,
+  "evaluation_sha256_matches": 1498,
+  "healthy_correspondence_records": 360,
+  "healthy_correspondence_sha256_matches": 360,
+  "current_dataset_card_license": "cc-by-sa-3.0",
+  "license_evidence_path": "README_HF.md",
+  "license_evidence_sha256": "9fbe34695a3f05583f47345e5174383226ecee9e7af9e21d979307771b2362fb",
+  "training_performed": false,
+  "model_inference_performed": false,
+  "evaluation_identity_method": "Evaluation manifest sample_id/original_path relative path joined to archived source SHA256; all 3852 source rows matched current public binary bytes. Historical evaluation sha256 cells were empty, not treated as binary hashes.",
+  "verification_date_utc": "2026-11-09"
+}
