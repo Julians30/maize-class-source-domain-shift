@@ -211,6 +211,27 @@ def _doi(record):
     return value.strip() if isinstance(value,str) else ''
 
 
+def _revision_header(record, etag):
+    """Invenio returns a quoted ETag but parses request If-Match as an int."""
+    revision = record.get('revision_id')
+    if revision is not None:
+        if isinstance(revision, bool) or not re.fullmatch(r'[0-9]+', str(revision)):
+            raise MetadataEditError('La revisión del borrador no tiene el formato numérico esperado.')
+        revision = str(int(revision))
+    from_etag = None
+    if etag:
+        match = re.fullmatch(r'(?:W/)?"([0-9]+)"|([0-9]+)', str(etag).strip())
+        if not match:
+            raise MetadataEditError('La cabecera de versión no tiene un formato reconocido; no se guarda sin control de concurrencia.')
+        from_etag = str(int(match.group(1) or match.group(2)))
+    if revision is not None and from_etag is not None and revision != from_etag:
+        raise MetadataEditError('La revisión y la cabecera de versión no coinciden; vuelve a leer el borrador antes de guardar.')
+    version = revision if revision is not None else from_etag
+    if version is None:
+        raise MetadataEditError('Zenodo no devolvió una revisión que permita guardar con control de concurrencia.')
+    return {'If-Match': version}
+
+
 def edit_metadata(namespace, expected_id, session_factory=None, prompt=getpass):
     """One Colab call: authorize, format, reserve DOI, verify, save audit."""
     if 'STATE_FILE' not in namespace:
@@ -261,7 +282,7 @@ def edit_metadata(namespace, expected_id, session_factory=None, prompt=getpass):
         payload={'metadata':metadata}
         for key in ['pids','access','custom_fields']:
             if key in before:payload[key]=deepcopy(before[key])
-        headers={'If-Match':etag} if etag else {}
+        headers=_revision_header(before,etag)
         _call(session,'PUT',native,json=payload,headers=headers)
         after,_=_call(session,'GET',native);_unpublished(after,expected_id)
         final=after.get('metadata',{})
