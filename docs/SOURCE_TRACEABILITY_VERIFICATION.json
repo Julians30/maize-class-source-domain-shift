@@ -1,0 +1,55 @@
+{
+  "doi": "10.5281/zenodo.24064539",
+  "archive_sha256": "4f4efbc585728442982f5784f07fd7b817383d89757393faed868443a652ca91",
+  "master_records": 13413,
+  "internal_records": 11491,
+  "target_records": 5605,
+  "target_records_with_complete_identity_fields": 5605,
+  "target_records_in_archived_extraction": 5605,
+  "canonical_split_field": "evaluation_role",
+  "source_summary": [
+    {
+      "source_operational": "CIMMYT_MLND",
+      "retained": 3229,
+      "train": 2260,
+      "validation": 485,
+      "test": 484,
+      "complete_identity_records": 3229,
+      "archived_extraction_exact_matches": 3229
+    },
+    {
+      "source_operational": "Kaggle_HEALTHY_up",
+      "retained": 1667,
+      "train": 1167,
+      "validation": 250,
+      "test": 250,
+      "complete_identity_records": 1667,
+      "archived_extraction_exact_matches": 1667
+    },
+    {
+      "source_operational": "Kaggle_Healthy_paren",
+      "retained": 709,
+      "train": 496,
+      "validation": 107,
+      "test": 106,
+      "complete_identity_records": 709,
+      "archived_extraction_exact_matches": 709
+    }
+  ],
+  "plantvillage_public_binary_check": {
+    "performed": true,
+    "public_source_images": 3852,
+    "matching_archived_source_hashes": 3852,
+    "evaluation_images_joined_to_verified_source": 1498,
+    "healthy_images_matching_source": 360
+  },
+  "input_sha256": {
+    "core_v7/manifests/manifest_master_clean_snapshot_v1_pre_split.csv": "19c902a8bd95b64d3594fa48a0a628a1357dbc48518f91e34e9fb502f27ac0e8",
+    "core_v7/manifests/e2a_adege_to_pandian_manifest_v1.csv": "dfc40666255cae21fe66fe18cefe62c041aa10db669143b1eb5230aded5fbeb6",
+    "core_v7/recovery/master_13413_exact_extraction_membership.csv": "d6e829af2c417dec6ba39e40a2c7cb63911412349b4cac0f75c2b5a5565350f1",
+    "additional_checks_v9/inputs/PlantVillage_source_SHA256.csv": "8b5912dca34daa7b4868c473d4ed58c38630df1d8fc14d47f9be55f22abdf8e4"
+  },
+  "training_performed": false,
+  "model_inference_performed": false,
+  "interpretation": "Reconciles existing archived identities. Archived extraction identity is not independent proof of original collecting institution, biological parent or upstream component-license clearance."
+}
