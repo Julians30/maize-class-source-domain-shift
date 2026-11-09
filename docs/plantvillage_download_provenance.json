@@ -1,0 +1,19 @@
+{
+  "original_notebook_name": "13_plantvillage_segundo_dominio_externo.ipynb",
+  "original_notebook_sha256": "5a128327b43c8a4a5d3b468644c5bd56b4289dd36697fde6a071633f1fb7559a",
+  "cell_index": 3,
+  "download_command": "git clone --filter=blob:none --sparse https://github.com/spMohanty/PlantVillage-Dataset.git /content/pvrepo",
+  "selection": "raw/color maize folders",
+  "completed_output_present": true,
+  "recorded_counts": {
+    "Cercospora_leaf_spot_Gray_leaf_spot": 513,
+    "Common_rust": 1192,
+    "Northern_Leaf_Blight": 985,
+    "healthy": 1162
+  },
+  "original_checkout_commit_recorded": false,
+  "public_commit_verified": "7f7ecc7e1eaca78107e3affe7cb5abd9427e139a",
+  "current_dataset_card_license": "cc-by-sa-3.0",
+  "current_license_card_sha256": "9fbe34695a3f05583f47345e5174383226ecee9e7af9e21d979307771b2362fb",
+  "source_note": "The repository release-safe Python transcription omitted the original notebook shell clone command. This record restores that acquisition evidence without executing the original notebook or publishing its private outputs."
+}
