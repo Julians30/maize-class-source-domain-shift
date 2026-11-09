@@ -1,6 +1,6 @@
 # Repository status — 8 November 2026
 
-**Public repository; manuscript under review at AgriEngineering; current persistent research-data release pending.** No acceptance or DOI is claimed.
+**Public repository; manuscript under review at AgriEngineering; current persistent research-data release pending.** No acceptance or registered archive DOI is claimed.
 
 ## Current revision
 
@@ -10,7 +10,7 @@
 - Native comparisons completed for 1,164 strong candidate pairs, including 190 critical cross-partition pairs.
 - Four exact critical RGB matches; 182 further assistant-supported pairs. The completed human record covers all 190 critical pairs: 189 same-photograph or transformation judgments and one related capture, none pending. Two contributors reviewed disjoint subsets (171 and 19); no independent double rating or agreement statistic is claimed. The four exact pairs are a subset of the 189 visual same-photograph judgments. The other 974 strong candidates were not visually adjudicated.
 - Conservative exclusion sensitivities preserve the internal architecture orderings; they do not reconstruct clean training or checkpoint selection.
-- Thirty checkpoint hashes verified. The data/code archive and all 30 checkpoints (31 files, approximately 9.04 GB) have been uploaded and checksum-verified in a private Zenodo draft. Publication, a registered DOI and public-download verification remain pending.
+- Thirty checkpoint hashes verified. The data/code archive and all 30 checkpoints (31 files, approximately 9.04 GB) have been uploaded and checksum-verified in a private Zenodo draft. The description and component license declarations have been updated and read back successfully; a DOI is reserved. Publication, DOI registration and public-download verification remain pending.
 
 ## Historical repository layer
 
@@ -32,4 +32,4 @@ Use `make presubmission-check` for the historical repository checks. `make relea
 
 ## Draft metadata preparation
 
-`scripts/zenodo_metadata.py` prepares readable descriptions, DOI reservation and explicit component license scope using the existing unpublished draft. It preserves authors and verified files, keeps a before/after metadata audit, and contains no publication, deletion or file-upload action. Its guards and idempotence passed 14 local simulated-response tests. This helper's preparation is not a claim that the remote metadata changes have already been applied or that third-party rights clearance is complete.
+`scripts/zenodo_metadata.py` prepares readable descriptions, DOI reservation and explicit component license scope using the existing unpublished draft. It preserves authors and verified files, keeps a before/after metadata audit, and contains no publication, deletion or file-upload action. After correcting content negotiation and the numeric If-Match header, its guards and idempotence passed 18 local simulated-response tests. A subsequent actual execution updated and read back the draft metadata, retained all 31 verified files, and confirmed a reserved DOI. The draft is still unpublished. Component license declarations do not establish independent clearance of all third-party assets.
