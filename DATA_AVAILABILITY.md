@@ -18,6 +18,6 @@ The filename CANDIDATO and preparation README within the ZIP are historical prep
 
 ## Rights and scientific limits
 
-Original derived data/documentation use CC BY 4.0. Original software and third-party pretrained/fine-tuned model components retain applicable terms; see LICENSE_SCOPE.md and PRETRAINED_MODEL_NOTICES.md. Public access does not clear unresolved exact upstream terms for 5,605 internal CIMMYT/Kaggle-derived images or the historical PlantVillage mirror chain.
+Original derived data/documentation use CC BY 4.0. Original software and third-party pretrained/fine-tuned model components retain applicable terms; see LICENSE_SCOPE.md and PRETRAINED_MODEL_NOTICES.md. All 5,605 CIMMYT/Kaggle-labeled identities and split roles are verified in the archived manifests. Their exact upstream component terms and original acquisition attribution remain unresolved. The original PlantVillage download repository and 3,852 source fingerprints are recovered and verified; its current dataset card declares CC BY-SA 3.0. See docs/SOURCE_TRACEABILITY.md. Public access alone does not clear unrelated upstream rights.
 
 The 190 critical pairs have completed human judgments, but the other 974 strong candidates were not visually adjudicated. Biological parents remain unconfirmed. Prediction-only exclusions do not reconstruct clean training or selection. Added seeds and optimization checks were retrospective. The archive does not supply the unperformed analyses listed in REPRODUCIBILITY.md.
