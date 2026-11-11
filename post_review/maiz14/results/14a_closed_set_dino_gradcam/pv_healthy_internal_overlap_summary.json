@@ -1,0 +1,11 @@
+{
+  "pv_healthy": 1162,
+  "matched_hamming_le5": 360,
+  "exact_sha256": 360,
+  "matched_by_internal_partition": {
+    "train": 261,
+    "validation": 50,
+    "test": 49
+  },
+  "distinct_internal_images_matched": 360
+}

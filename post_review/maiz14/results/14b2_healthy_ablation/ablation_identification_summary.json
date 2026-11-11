@@ -1,0 +1,29 @@
+{
+  "pv_healthy_images": 1162,
+  "linked_by_role": {
+    "train": 496,
+    "val": 107,
+    "test": 106
+  },
+  "linked_by_source": {
+    "Kaggle_Healthy_paren": 709
+  },
+  "healthy_by_role": {
+    "train": 1805,
+    "val": 388,
+    "test": 386
+  },
+  "exact_sha256_by_role": {
+    "train": 261,
+    "val": 50,
+    "test": 49
+  },
+  "archived_reference": {
+    "train": 496,
+    "val": 107,
+    "test": 106,
+    "total": 709
+  },
+  "rule": "D4 (eight dihedral variants) 64-bit imagehash.phash, Hamming <= 5, PlantVillage commit 7f7ecc7e1eaca78107e3affe7cb5abd9427e139a",
+  "matches_archived_reference": true
+}

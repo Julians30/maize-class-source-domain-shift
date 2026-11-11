@@ -1,0 +1,13 @@
+{
+  "torch": "2.14.1+cu130",
+  "torchvision": "0.29.1+cu130",
+  "timm": "1.0.15",
+  "gpu": "NVIDIA L4",
+  "python": "3.13.16",
+  "training_versions": {
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "timm": "1.0.15"
+  },
+  "same_as_training": false
+}

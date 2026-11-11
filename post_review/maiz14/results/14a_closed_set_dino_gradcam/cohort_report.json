@@ -1,0 +1,31 @@
+{
+  "pv_public_folder_counts": {
+    "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": 513,
+    "Corn_(maize)___Common_rust_": 1192,
+    "Corn_(maize)___Northern_Leaf_Blight": 985,
+    "Corn_(maize)___healthy": 1162
+  },
+  "pv_bs_input": "prepared historical cache",
+  "pv_bs_public_recipe_pixel_identical_to_prepared_cache": 1498,
+  "tom_index_files": 4737,
+  "tom_helm": {
+    "folder": "Helminthosporiosis-D",
+    "files": 159,
+    "conflicting_label_files_removed": 2,
+    "exact_redundant_copies_removed": 3,
+    "already_in_primary": 0,
+    "unreadable": [],
+    "retained": 154,
+    "mapping": "Helminthosporiosis-D -> leaf_blight (taxonomic sensitivity mapping; no image-level label review)"
+  },
+  "tom_curv": {
+    "folder": "Curvularia-D",
+    "files": 259,
+    "conflicting_label_files_removed": 2,
+    "exact_redundant_copies_removed": 3,
+    "already_in_primary": 0,
+    "unreadable": [],
+    "retained": 254,
+    "mapping": "Curvularia-D -> leaf_spot (taxonomic sensitivity mapping; no image-level label review)"
+  }
+}

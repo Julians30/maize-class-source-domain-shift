@@ -1,0 +1,46 @@
+{
+  "status": "done",
+  "source_used": "mendeley",
+  "dataset_doi": "10.17632/fkw49mz3xs.1",
+  "classes_compared": [
+    "MLN",
+    "HEALTHY"
+  ],
+  "tanzania_images_by_class": {
+    "MLN": 3231,
+    "HEALTHY": 3073
+  },
+  "exact_sha256_in_internal_by_class": {
+    "MLN": 2985,
+    "HEALTHY": 1667
+  },
+  "phash_le5_in_internal_by_class": {
+    "MLN": 3230,
+    "HEALTHY": 1667
+  },
+  "same_filename_in_internal_by_class": {
+    "MLN": 2985,
+    "HEALTHY": 1667
+  },
+  "matches_by_tz_class_and_internal_class": {
+    "HEALTHY->healthy": 1667,
+    "MLN->lethal_necrosis": 3230
+  },
+  "internal_indexed_by_class": {
+    "lethal_necrosis": 3229,
+    "healthy": 2579,
+    "streak_virus": 137
+  },
+  "internal_with_exact_tanzania_copy_by_class": {
+    "lethal_necrosis": 2985,
+    "healthy": 1667
+  },
+  "internal_with_exact_tanzania_copy_by_partition_class": {
+    "test|healthy": 250,
+    "test|lethal_necrosis": 447,
+    "train|healthy": 1167,
+    "train|lethal_necrosis": 2084,
+    "validation|healthy": 250,
+    "validation|lethal_necrosis": 454
+  }
+}
