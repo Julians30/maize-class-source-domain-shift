@@ -1,0 +1,26 @@
+{
+  "pandian_images": 1922,
+  "pv_rust_images": 1192,
+  "threshold_hamming": 5,
+  "pandian_matched": 1922,
+  "pandian_unmatched": 0,
+  "pandian_exact_sha256_copies": 954,
+  "matched_by_transform": {
+    "identity": 970,
+    "flip_lr": 952
+  },
+  "hamming_distribution_matched": {
+    "0": 1866,
+    "2": 56
+  },
+  "second_parent_hamming_min": 6,
+  "distinct_pv_parents": 1146,
+  "pv_parents_by_children": {
+    "1": 370,
+    "2": 776
+  },
+  "pv_rust_without_pandian_child": 46,
+  "identity_orientation_matches_at_threshold": 970,
+  "pv_commit": "7f7ecc7e1eaca78107e3affe7cb5abd9427e139a",
+  "hash": "imagehash.phash 64-bit, RGB"
+}

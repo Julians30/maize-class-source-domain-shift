@@ -1,0 +1,41 @@
+{
+  "change": "remove every PlantVillage-derived healthy image (byte copies and dihedral variants, D4-pHash<=5) from train and validation; nothing else",
+  "comparison": "same-seed original public checkpoint evaluated with identical code",
+  "evaluation_policy": "Training script ends at validation; evaluation runs afterwards on the frozen checkpoint.",
+  "jobs": [
+    {
+      "job_id": "healthy_ablation_full_efficientnet_b0_seed17_lr3e-04",
+      "learning_rate": 0.0003,
+      "model_key": "efficientnet_b0",
+      "seed": 17
+    },
+    {
+      "job_id": "healthy_ablation_full_efficientnet_b0_seed42_lr3e-04",
+      "learning_rate": 0.0003,
+      "model_key": "efficientnet_b0",
+      "seed": 42
+    },
+    {
+      "job_id": "healthy_ablation_full_efficientnet_b0_seed73_lr3e-04",
+      "learning_rate": 0.0003,
+      "model_key": "efficientnet_b0",
+      "seed": 73
+    }
+  ],
+  "revision": "2026-11-10-maiz14b2-plantvillage-healthy-full-ablation",
+  "source_sha256": "c80a305aa31475fc5416d7e07733899434efca1b89e5c30f7cb2de990c2ea1aa",
+  "stage": "post-review healthy-component ablation, after external outcomes were known",
+  "unchanged_recipe": {
+    "effective_batch": 64,
+    "label_smoothing": 0.1,
+    "max_epochs": 40,
+    "num_workers": 0,
+    "optimizer": "AdamW",
+    "patience": 8,
+    "scheduler": "original cosine",
+    "selection": "validation macro-F1",
+    "split": "original hash-verified E2_A",
+    "warmup_fraction": 0.05,
+    "weight_decay": 0.0001
+  }
+}

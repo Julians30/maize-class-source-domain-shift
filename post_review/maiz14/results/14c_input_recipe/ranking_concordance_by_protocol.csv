@@ -1,0 +1,4 @@
+protocol_set,kendall_W_four_axes,kendall_W_external,leader_internal_test,leader_pandian2019,leader_plantvillage,leader_tom2024_primary
+historical mix,0.05714285714285714,0.022222222222222223,EfficientNet-B0,ViT-Base/16,MobileViT-S,ResNet50
+all crop,0.11428571428571428,0.06031746031746032,EfficientNet-B0,ViT-Base/16,MobileViT-S,ResNet50
+all squash,0.15714285714285714,0.07301587301587302,ResNet50,EfficientNet-B0,MobileViT-S,ResNet50
