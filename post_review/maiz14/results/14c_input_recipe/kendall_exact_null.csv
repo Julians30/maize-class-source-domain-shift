@@ -1,0 +1,4 @@
+recipe_set,W,exact_lower_tail_p,exact_upper_tail_p
+historical mix,0.057143,0.046730,0.965682
+all axes crop,0.114286,0.171835,0.849806
+all axes resize,0.157143,0.295278,0.727994
