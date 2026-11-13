@@ -4,7 +4,7 @@
 
 Reproducibility repository for **Class–Source Confounding and Architecture-Selection Instability under Domain Shift: A Multi-Source Benchmark for Maize Disease and Pest Image Classification**.
 
-**Revision status, 11 November 2026:** under review at *AgriEngineering*; the post-review analyses MAIZ_14A–14T are documented in [post_review/maiz14](post_review/maiz14/README.md). No acceptance, journal DOI, published Zenodo record or archive DOI is claimed.
+**Editorial status (13 November 2026):** Accepted for publication in *AgriEngineering* (MDPI), as reported by the author. The post-review analyses MAIZ_14A–14T are documented in [post_review/maiz14](post_review/maiz14/README.md). A journal publication DOI has not been supplied; the separate, published Zenodo research archive is [10.5281/zenodo.24064539](https://doi.org/10.5281/zenodo.24064539). Acceptance is not presented as online publication.
 
 ## Current scientific reporting
 
