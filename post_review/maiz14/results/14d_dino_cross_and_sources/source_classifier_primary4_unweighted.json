@@ -1,0 +1,22 @@
+{
+  "tag": "primary4_unweighted",
+  "weighted": false,
+  "labels": [
+    "Adege",
+    "CCMT",
+    "PlantVillage",
+    "Tanzania"
+  ],
+  "n_train": 8043,
+  "n_val": 1729,
+  "n_test": 1719,
+  "best_epoch": 4,
+  "epochs_run": 7,
+  "val_macro_f1_best": 1.0,
+  "test_accuracy": 0.9988365328679465,
+  "test_balanced_accuracy": 0.9993188010899182,
+  "test_macro_f1": 0.9993112307339094,
+  "test_mcc": 0.998157282549649,
+  "chance_majority": 0.4269924374636416,
+  "test_roc_auc_ovr": 0.9999986086337062
+}

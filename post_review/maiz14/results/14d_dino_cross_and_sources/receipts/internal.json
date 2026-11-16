@@ -1,0 +1,32 @@
+{
+  "stage": "internal",
+  "completed_utc": "2026-11-16T14:42:23.856149+00:00",
+  "version": "2026-11-09-maiz14",
+  "images": 11491,
+  "partitions": {
+    "train": 8043,
+    "validation": 1729,
+    "test": 1719
+  },
+  "components": {
+    "raw_ccmt_clean": 4811,
+    "CIMMYT_MLND": 3229,
+    "Kaggle_HEALTHY_up": 1667,
+    "Adege_field_smartphone": 994,
+    "Kaggle_Healthy_paren": 709,
+    "Adege_rust_rss": 81
+  },
+  "source_by_class": {
+    "Adege|rust": 1075,
+    "CCMT|fall_armyworm": 282,
+    "CCMT|grasshopper": 669,
+    "CCMT|healthy": 203,
+    "CCMT|leaf_beetle": 932,
+    "CCMT|leaf_blight": 783,
+    "CCMT|leaf_spot": 1025,
+    "CCMT|streak_virus": 917,
+    "PlantVillage|healthy": 709,
+    "Tanzania|healthy": 1667,
+    "Tanzania|lethal_necrosis": 3229
+  }
+}

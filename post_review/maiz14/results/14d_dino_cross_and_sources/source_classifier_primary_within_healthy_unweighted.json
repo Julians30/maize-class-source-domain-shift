@@ -1,0 +1,21 @@
+{
+  "tag": "primary_within_healthy_unweighted",
+  "weighted": false,
+  "labels": [
+    "CCMT",
+    "PlantVillage",
+    "Tanzania"
+  ],
+  "n_train": 1805,
+  "n_val": 388,
+  "n_test": 386,
+  "best_epoch": 7,
+  "epochs_run": 10,
+  "val_macro_f1_best": 1.0,
+  "test_accuracy": 0.9948186528497409,
+  "test_balanced_accuracy": 0.9875555555555556,
+  "test_macro_f1": 0.9875555555555556,
+  "test_mcc": 0.9896180742334588,
+  "chance_majority": 0.6476683937823834,
+  "test_roc_auc_ovr": 0.9998145333039584
+}

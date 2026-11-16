@@ -1,0 +1,11 @@
+cohort,class,images,ge_0_95,ge_0_97,max_cosine
+pandian2019,rust,1922,0,0,0.92363775
+pv_bs,leaf_blight,985,0,0,0.9458195
+pv_bs,leaf_spot,513,0,0,0.9379064
+pv_healthy,healthy,1162,404,391,1.0000004
+pv_rust,rust,1192,0,0,0.9236577
+tom_curv,leaf_spot,254,0,0,0.9354186
+tom_helm,leaf_blight,154,0,0,0.93787897
+tom_p,fall_armyworm,581,0,0,0.9175448
+tom_p,healthy,555,4,0,0.95912874
+tom_p,rust,94,0,0,0.93845

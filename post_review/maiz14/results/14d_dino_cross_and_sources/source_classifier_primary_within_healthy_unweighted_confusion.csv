@@ -1,0 +1,4 @@
+,pred_CCMT,pred_PlantVillage,pred_Tanzania
+true_CCMT,29,0,1
+true_PlantVillage,0,106,0
+true_Tanzania,1,0,249
