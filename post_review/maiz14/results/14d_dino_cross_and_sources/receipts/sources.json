@@ -1,0 +1,6 @@
+{
+  "stage": "sources",
+  "completed_utc": "2026-11-16T14:47:43.776720+00:00",
+  "version": "2026-11-09-maiz14",
+  "recipe": "archived notebook 07: MobileNetV3-Large IMAGENET1K_V1, seed 17, <=12 epochs, patience 3"
+}

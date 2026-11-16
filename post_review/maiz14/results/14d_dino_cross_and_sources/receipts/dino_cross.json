@@ -1,0 +1,20 @@
+{
+  "stage": "dino_cross",
+  "completed_utc": "2026-11-16T14:56:47.050982+00:00",
+  "version": "2026-11-09-maiz14",
+  "model": "vit_base_patch14_dinov2.lvd142m",
+  "thresholds": [
+    0.9,
+    0.95,
+    0.97
+  ],
+  "cohorts": [
+    "pv_bs",
+    "pv_rust",
+    "pv_healthy",
+    "tom_p",
+    "tom_helm",
+    "tom_curv",
+    "pandian2019"
+  ]
+}

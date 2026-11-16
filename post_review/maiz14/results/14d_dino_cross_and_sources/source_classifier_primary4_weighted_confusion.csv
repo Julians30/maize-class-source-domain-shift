@@ -1,0 +1,5 @@
+,pred_Adege,pred_CCMT,pred_PlantVillage,pred_Tanzania
+true_Adege,158,3,0,0
+true_CCMT,0,718,0,0
+true_PlantVillage,0,0,106,0
+true_Tanzania,0,0,0,734
