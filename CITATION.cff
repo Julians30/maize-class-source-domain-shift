@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this repository or its archived data/code, please cite the article in 'preferred-citation'."
+title: "Maize Class–Source Confounding and Domain Shift Benchmark (reproducibility repository)"
+authors:
+  - family-names: Villamar-Barros
+    given-names: Hamilton
+  - family-names: Coronel-Reyes
+    given-names: Julián
+  - family-names: Vergara-Lozano
+    given-names: Vanessa
+  - family-names: Haro-Sarango
+    given-names: Alexander
+repository-code: "https://github.com/Julians30/maize-class-source-domain-shift"
+url: "https://github.com/Julians30/maize-class-source-domain-shift"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Class–Source Confounding and Task-Dependent Architecture Rankings in a Multi-Source Benchmark for Maize Disease and Pest Image Classification"
+  authors:
+    - family-names: Villamar-Barros
+      given-names: Hamilton
+    - family-names: Coronel-Reyes
+      given-names: Julián
+    - family-names: Vergara-Lozano
+      given-names: Vanessa
+    - family-names: Haro-Sarango
+      given-names: Alexander
+  journal: "AgriEngineering"
+  publisher:
+    name: MDPI
+  year: 2026
+  volume: 8
+  issue: 12
+  start: 515
+  doi: "10.3390/agriengineering8120515"

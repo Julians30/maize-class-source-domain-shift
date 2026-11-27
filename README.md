@@ -1,10 +1,30 @@
 # Maize Class–Source Confounding and Domain Shift Benchmark
 
-[![Repository audit](https://github.com/Julians30/maize-class-source-domain-shift/actions/workflows/repository-audit.yml/badge.svg?branch=main)](https://github.com/Julians30/maize-class-source-domain-shift/actions/workflows/repository-audit.yml) [![Code License: MIT](https://img.shields.io/badge/Code%20License-MIT-blue.svg)](LICENSE)
+[![Repository audit](https://github.com/Julians30/maize-class-source-domain-shift/actions/workflows/repository-audit.yml/badge.svg?branch=main)](https://github.com/Julians30/maize-class-source-domain-shift/actions/workflows/repository-audit.yml) [![Code License: MIT](https://img.shields.io/badge/Code%20License-MIT-blue.svg)](LICENSE) [![DOI](https://img.shields.io/badge/DOI-10.3390%2Fagriengineering8120515-blue.svg)](https://doi.org/10.3390/agriengineering8120515)
 
 Reproducibility repository for **Class–Source Confounding and Task-Dependent Architecture Rankings in a Multi-Source Benchmark for Maize Disease and Pest Image Classification**.
 
-**Revision materials (16 November 2026):** The second-round revision uses the title above. The post-review analyses are documented in [post_review/maiz14](post_review/maiz14/README.md). The final Zenodo research archive, version **1.0.0**, was published on 16 November 2026 at [10.5281/zenodo.24284811](https://doi.org/10.5281/zenodo.24284811). This is a research-data DOI; a journal publication DOI has not been supplied.
+**Published (27 November 2026):** This work is published in *AgriEngineering* (MDPI). Villamar-Barros, H.; Coronel-Reyes, J.; Vergara-Lozano, V.; Haro-Sarango, A. Class–Source Confounding and Task-Dependent Architecture Rankings in a Multi-Source Benchmark for Maize Disease and Pest Image Classification. *AgriEngineering* **2026**, *8*(12), 515. [https://doi.org/10.3390/agriengineering8120515](https://doi.org/10.3390/agriengineering8120515). The post-review analyses are documented in [post_review/maiz14](post_review/maiz14/README.md). The final Zenodo research archive, version **1.0.0**, was published on 16 November 2026 at [10.5281/zenodo.24284811](https://doi.org/10.5281/zenodo.24284811).
+
+## Citation
+
+If you use this repository or the archived data/code, please cite the article:
+
+> Villamar-Barros, H.; Coronel-Reyes, J.; Vergara-Lozano, V.; Haro-Sarango, A. Class–Source Confounding and Task-Dependent Architecture Rankings in a Multi-Source Benchmark for Maize Disease and Pest Image Classification. *AgriEngineering* **2026**, *8*(12), 515. https://doi.org/10.3390/agriengineering8120515
+
+```bibtex
+@article{villamarbarros2026maize,
+  author  = {Villamar-Barros, Hamilton and Coronel-Reyes, Juli{\'a}n and Vergara-Lozano, Vanessa and Haro-Sarango, Alexander},
+  title   = {Class--Source Confounding and Task-Dependent Architecture Rankings in a Multi-Source Benchmark for Maize Disease and Pest Image Classification},
+  journal = {AgriEngineering},
+  year    = {2026},
+  volume  = {8},
+  number  = {12},
+  pages   = {515},
+  doi     = {10.3390/agriengineering8120515},
+  publisher = {MDPI}
+}
+```
 
 ## Current scientific reporting
 
