@@ -1,6 +1,6 @@
-# Repository status — 9 November 2026 (UTC)
+# Repository status — 27 November 2026 (UTC)
 
-**Public repository and published research-data record; manuscript under review at AgriEngineering.** DOI: https://doi.org/10.5281/zenodo.24064539. No editorial acceptance is claimed.
+**Public repository and published research-data record; the manuscript is published in *AgriEngineering* (MDPI), DOI [10.3390/agriengineering8120515](https://doi.org/10.3390/agriengineering8120515) (*AgriEngineering* 2026, 8(12), 515).** Research-data archive DOI: https://doi.org/10.5281/zenodo.24064539.
 
 ## Current revision
 
